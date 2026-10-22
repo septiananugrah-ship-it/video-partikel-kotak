@@ -1,651 +1,651 @@
 1
-00:00:01,600 --> 00:00:06,274
+00:00:01,600 --> 00:00:05,940
 Lihat tiga botol kecil ini di bawah sinar ultraviolet.
 
 2
-00:00:06,274 --> 00:00:11,158
+00:00:05,940 --> 00:00:11,480
 Yang satu berpendar biru, yang satu hijau, dan yang satu merah.
 
 3
-00:00:11,158 --> 00:00:16,429
+00:00:11,480 --> 00:00:17,200
 Anehnya, isinya bahan yang sama persis: kristal kadmium selenida.
 
 4
-00:00:16,429 --> 00:00:19,682
+00:00:17,200 --> 00:00:20,320
 Tidak ada zat pewarna yang ditambahkan.
 
 5
-00:00:19,682 --> 00:00:27,440
+00:00:20,320 --> 00:00:28,120
 Satu-satunya perbedaan adalah ukuran butirnya: sekitar dua, tiga, dan enam nanometer.
 
 6
-00:00:27,440 --> 00:00:32,591
+00:00:28,120 --> 00:00:32,800
 Mengapa butir yang lebih kecil memancarkan cahaya yang lebih biru?
 
 7
-00:00:32,591 --> 00:00:39,960
+00:00:32,800 --> 00:00:40,200
 Jawabannya: di dalam butir sekecil itu, elektron terkurung seperti partikel di dalam kotak.
 
 8
-00:00:48,967 --> 00:00:54,472
+00:00:49,200 --> 00:00:54,280
 Video ini membahas teori kuantum gerak translasi dalam tiga bagian.
 
 9
-00:00:54,472 --> 00:01:02,873
+00:00:54,280 --> 00:01:03,100
 Pertama, prinsip dan teori dasarnya: dari partikel bebas, kotak satu sampai tiga dimensi, hingga penerowongan.
 
 10
-00:01:02,873 --> 00:01:09,954
+00:01:03,100 --> 00:01:10,320
 Kedua, implementasinya dalam kimia: serapan cahaya, elektron pi, dan warna molekul.
 
 11
-00:01:09,954 --> 00:01:17,323
+00:01:10,320 --> 00:01:18,040
 Dan ketiga, penerapannya di industri: titik kuantum, mikroskop penerowongan, dan memori flash.
 
 12
-00:01:19,933 --> 00:01:27,280
+00:01:20,633 --> 00:01:27,713
 Kita mulai dari gerak paling sederhana: sebuah elektron yang bergerak bebas, tanpa gaya apa pun.
 
 13
-00:01:27,280 --> 00:01:32,319
+00:01:27,713 --> 00:01:32,773
 Potensialnya sama di mana-mana, jadi kita boleh menganggapnya nol.
 
 14
-00:01:32,319 --> 00:01:37,082
+00:01:32,773 --> 00:01:37,493
 Persamaan Schrödinger untuknya hanya berisi energi kinetik.
 
 15
-00:01:37,082 --> 00:01:43,553
+00:01:37,493 --> 00:01:44,813
 Solusinya adalah gelombang yang merambat, e pangkat i k x, dengan bilangan gelombang k.
 
 16
-00:01:43,553 --> 00:01:49,768
+00:01:44,813 --> 00:01:51,733
 Momentumnya h bar kali k, dan panjang gelombangnya mengikuti de Broglie: h per p.
 
 17
-00:01:49,768 --> 00:01:53,975
+00:01:51,733 --> 00:01:56,933
 Energinya h bar kuadrat k kuadrat, per dua m.
 
 18
-00:01:53,975 --> 00:02:02,088
+00:01:56,933 --> 00:02:04,453
 Karena k boleh bernilai berapa saja, energinya juga boleh bernilai berapa saja: spektrumnya kontinu.
 
 19
-00:02:02,088 --> 00:02:12,264
+00:02:04,453 --> 00:02:13,853
 Tapi ada harganya: rapat peluang gelombang ini sama rata di seluruh ruang, sehingga kita sama sekali tidak tahu di mana elektronnya.
 
 20
-00:02:12,264 --> 00:02:19,868
+00:02:13,853 --> 00:02:20,813
 Untuk melokalisasi partikel, kita harus menjumlahkan banyak gelombang menjadi sebuah paket gelombang.
 
 21
-00:02:22,267 --> 00:02:27,584
+00:02:23,200 --> 00:02:28,520
 Sekarang kita kurung elektron itu di antara dua dinding yang berjarak L.
 
 22
-00:02:27,584 --> 00:02:31,969
+00:02:28,520 --> 00:02:33,440
 Di dalam kotak potensialnya nol, di luar kotak tak hingga.
 
 23
-00:02:31,969 --> 00:02:38,429
+00:02:33,440 --> 00:02:39,800
 Elektron tidak mungkin berada di luar, jadi fungsi gelombangnya harus nol di kedua dinding.
 
 24
-00:02:38,429 --> 00:02:44,335
+00:02:39,800 --> 00:02:45,480
 Inilah syarat batas, persis seperti senar gitar yang kedua ujungnya diikat.
 
 25
-00:02:44,335 --> 00:02:49,174
+00:02:45,480 --> 00:02:50,540
 Solusi umum di dalam kotak adalah kombinasi sinus dan kosinus.
 
 26
-00:02:49,174 --> 00:02:52,982
+00:02:50,540 --> 00:02:54,900
 Syarat di x sama dengan nol membuang suku kosinus.
 
 27
-00:02:52,982 --> 00:03:00,019
+00:02:54,900 --> 00:03:03,140
 Syarat di x sama dengan L menuntut sinus k L bernilai nol, sehingga k L harus kelipatan pi.
 
 28
-00:03:00,019 --> 00:03:07,635
+00:03:03,140 --> 00:03:10,860
 Jadi hanya gelombang yang memuat tepat satu, dua, tiga, atau lebih setengah gelombang yang boleh ada.
 
 29
-00:03:07,635 --> 00:03:13,729
+00:03:10,860 --> 00:03:17,100
 Nilai n sama dengan nol tidak diizinkan, karena fungsinya lenyap di mana-mana.
 
 30
-00:03:16,133 --> 00:03:23,160
+00:03:19,500 --> 00:03:27,060
 Masukkan k sama dengan n pi per L ke rumus energi, dan kita peroleh hasil terpenting modul ini.
 
 31
-00:03:23,160 --> 00:03:28,499
+00:03:27,060 --> 00:03:33,460
 E n sama dengan n kuadrat h kuadrat, per delapan m L kuadrat.
 
 32
-00:03:28,499 --> 00:03:34,216
+00:03:33,460 --> 00:03:38,860
 Energinya tidak lagi kontinu. Hanya anak tangga tertentu yang diizinkan.
 
 33
-00:03:34,216 --> 00:03:42,717
+00:03:38,860 --> 00:03:48,460
 Dan anak tangganya makin renggang: E dua empat kali E satu, E tiga sembilan kali, E empat enam belas kali.
 
 34
-00:03:42,717 --> 00:03:50,110
+00:03:48,460 --> 00:03:55,980
 Untuk elektron dalam kotak selebar satu nanometer, E satu sekitar nol koma tiga delapan elektronvolt.
 
 35
-00:03:50,110 --> 00:03:56,393
+00:03:55,980 --> 00:04:02,860
 Lalu E dua satu koma lima, dan E tiga tiga koma tiga delapan elektronvolt.
 
 36
-00:03:56,393 --> 00:04:03,728
+00:04:02,860 --> 00:04:10,500
 Rumus ini juga memberi skala: energi berbanding terbalik dengan massa dan dengan kuadrat panjang kotak.
 
 37
-00:04:03,728 --> 00:04:10,011
+00:04:10,500 --> 00:04:16,580
 Perbesar kotak dua kali, dan semua tingkat energi turun menjadi seperempatnya.
 
 38
-00:04:10,011 --> 00:04:21,034
+00:04:16,580 --> 00:04:27,220
 Untuk bola di dalam kotak sebesar kardus, anak tangganya begitu rapat sehingga tampak kontinu. Itulah sebabnya dunia sehari-hari terlihat klasik.
 
 39
-00:04:23,433 --> 00:04:30,968
+00:04:29,633 --> 00:04:37,353
 Setiap anak tangga punya fungsi gelombangnya sendiri: akar dua per L, dikali sinus n pi x per L.
 
 40
-00:04:30,968 --> 00:04:39,247
+00:04:37,353 --> 00:04:45,633
 Faktor akar dua per L berasal dari normalisasi: peluang total menemukan elektron di dalam kotak harus satu.
 
 41
-00:04:39,247 --> 00:04:46,462
+00:04:45,633 --> 00:04:52,473
 Kuadrat fungsi gelombang memberi rapat peluang, yaitu di mana elektron kemungkinan besar ditemukan.
 
 42
-00:04:46,462 --> 00:04:51,979
+00:04:52,473 --> 00:04:57,873
 Pada n sama dengan satu, elektron paling sering ditemukan di tengah kotak.
 
 43
-00:04:51,979 --> 00:04:58,193
+00:04:57,873 --> 00:05:05,033
 Pada n sama dengan dua, tepat di tengah justru ada simpul: rapat peluangnya nol.
 
 44
-00:04:58,193 --> 00:05:04,288
+00:05:05,033 --> 00:05:11,193
 Secara umum, keadaan ke n memiliki n minus satu simpul di dalam kotak.
 
 45
-00:05:04,288 --> 00:05:15,499
+00:05:11,193 --> 00:05:22,473
 Peluang di setengah bagian tengah kotak untuk n sama dengan satu adalah delapan puluh dua persen. Untuk n sama dengan dua, tepat lima puluh persen.
 
 46
-00:05:15,499 --> 00:05:24,812
+00:05:22,473 --> 00:05:31,873
 Makin besar n, puncaknya makin rapat, dan rata-ratanya mendekati sebaran seragam, seperti bola klasik yang memantul bolak-balik.
 
 47
-00:05:24,812 --> 00:05:33,102
+00:05:31,873 --> 00:05:39,793
 Inilah prinsip korespondensi: mekanika kuantum menyatu dengan mekanika klasik pada bilangan kuantum besar.
 
 48
-00:05:35,500 --> 00:05:43,492
+00:05:42,200 --> 00:05:50,560
 Perhatikan keadaan dasarnya. Energi terendah bukan nol, melainkan h kuadrat per delapan m L kuadrat.
 
 49
-00:05:43,492 --> 00:05:49,518
+00:05:50,560 --> 00:05:56,640
 Inilah energi titik nol: partikel yang dikurung tidak pernah benar-benar diam.
 
 50
-00:05:49,518 --> 00:05:53,514
+00:05:56,640 --> 00:06:00,760
 Alasannya adalah prinsip ketidakpastian Heisenberg.
 
 51
-00:05:53,514 --> 00:06:01,873
+00:06:00,760 --> 00:06:09,360
 Di dalam kotak, posisi elektron terbatas, jadi ketidakpastian posisinya tidak bisa melebihi ukuran kotak.
 
 52
-00:06:01,873 --> 00:06:07,321
+00:06:09,360 --> 00:06:15,240
 Akibatnya momentum tidak mungkin tepat nol; harus ada sebaran momentum.
 
 53
-00:06:07,321 --> 00:06:14,059
+00:06:15,240 --> 00:06:21,980
 Rata-rata momentumnya memang nol, karena elektron sama seringnya bergerak ke kiri dan ke kanan.
 
 54
-00:06:14,059 --> 00:06:21,285
+00:06:21,980 --> 00:06:29,180
 Tetapi rata-rata kuadrat momentumnya tidak nol, dan dari situlah energi kinetiknya berasal.
 
 55
-00:06:21,285 --> 00:06:32,039
+00:06:29,180 --> 00:06:40,380
 Hasil hitungannya: delta x kali delta p untuk keadaan dasar sekitar nol koma lima tujuh h bar, sedikit di atas batas minimum setengah h bar.
 
 56
-00:06:32,039 --> 00:06:38,900
+00:06:40,380 --> 00:06:47,740
 Makin sempit kotaknya, makin lebar sebaran momentumnya, dan makin tinggi energi titik nolnya.
 
 57
-00:06:41,300 --> 00:06:47,880
+00:06:50,133 --> 00:06:57,213
 Sekarang beri elektron dua arah gerak: sebuah kotak datar dengan sisi L x dan L y.
 
 58
-00:06:47,880 --> 00:06:56,794
+00:06:57,213 --> 00:07:06,213
 Gerak ke arah x dan ke arah y tidak saling memengaruhi, sehingga fungsi gelombangnya terpisah menjadi hasil kali dua sinus.
 
 59
-00:06:56,794 --> 00:07:03,654
+00:07:06,213 --> 00:07:13,493
 Energinya pun menjadi jumlah dua bagian, dengan dua bilangan kuantum, n x dan n y.
 
 60
-00:07:03,654 --> 00:07:12,390
+00:07:13,493 --> 00:07:23,253
 Rapat peluangnya membentuk pola petak, dengan n x minus satu garis simpul tegak dan n y minus satu garis simpul mendatar.
 
 61
-00:07:12,390 --> 00:07:20,880
+00:07:23,253 --> 00:07:32,813
 Pada kotak persegi, keadaan satu-dua dan dua-satu tampak berbeda, tetapi energinya sama: lima E nol.
 
 62
-00:07:20,880 --> 00:07:26,208
+00:07:32,813 --> 00:07:38,413
 Keadaan berbeda dengan energi yang sama disebut terdegenerasi.
 
 63
-00:07:26,208 --> 00:07:34,766
+00:07:38,413 --> 00:07:46,853
 Degenerasi ini lahir dari simetri. Regangkan kotaknya menjadi persegi panjang, dan kedua tingkat itu berpisah.
 
 64
-00:07:34,766 --> 00:07:43,125
+00:07:46,853 --> 00:07:55,093
 Untuk kotak satu kali dua nanometer, energinya menjadi nol koma tujuh lima dan satu koma enam elektronvolt.
 
 65
-00:07:45,533 --> 00:07:52,382
+00:07:57,500 --> 00:08:04,420
 Tambahkan satu dimensi lagi, dan kita mendapat kotak tiga dimensi, misalnya sebuah kubus.
 
 66
-00:07:52,382 --> 00:07:59,231
+00:08:04,420 --> 00:08:11,140
 Kini ada tiga bilangan kuantum, dan energinya sebanding dengan jumlah kuadrat ketiganya.
 
 67
-00:07:59,231 --> 00:08:05,514
+00:08:11,140 --> 00:08:18,620
 Keadaan dasarnya satu-satu-satu, dengan energi tiga E nol, bukan satu E nol.
 
 68
-00:08:05,514 --> 00:08:13,450
+00:08:18,620 --> 00:08:27,020
 Tingkat berikutnya, enam E nol, dimiliki tiga keadaan: satu-satu-dua dan dua permutasinya.
 
 69
-00:08:13,450 --> 00:08:21,242
+00:08:27,020 --> 00:08:34,460
 Pada sebelas E nol ada tiga keadaan, dan pada empat belas E nol ada enam keadaan sekaligus.
 
 70
-00:08:21,242 --> 00:08:32,076
+00:08:34,460 --> 00:08:45,340
 Kadang degenerasi muncul tanpa simetri yang jelas. Pada dua puluh tujuh E nol, satu-satu-lima dan tiga-tiga-tiga kebetulan berenergi sama.
 
 71
-00:08:32,076 --> 00:08:42,510
+00:08:45,340 --> 00:08:55,780
 Untuk elektron dalam kubus bersisi satu nanometer, energi dasarnya satu koma satu tiga elektronvolt, dan tingkat berikutnya dua kali lipatnya.
 
 72
-00:08:42,510 --> 00:08:49,748
+00:08:55,780 --> 00:09:03,140
 Model yang sama, dengan kotak sebesar sepotong logam, menjelaskan gas elektron bebas di dalam logam.
 
 73
-00:08:52,133 --> 00:08:58,994
+00:09:05,533 --> 00:09:12,933
 Dinding tak hingga hanyalah idealisasi. Dinding nyata selalu punya tinggi berhingga, V nol.
 
 74
-00:08:58,994 --> 00:09:04,599
+00:09:12,933 --> 00:09:18,793
 Di dalam sumur, fungsi gelombang tetap berosilasi seperti sinus dan kosinus.
 
 75
-00:09:04,599 --> 00:09:12,226
+00:09:18,793 --> 00:09:26,353
 Tetapi di luar dinding, ia tidak langsung nol. Ia meluruh secara eksponensial, membentuk ekor.
 
 76
-00:09:12,226 --> 00:09:18,309
+00:09:26,353 --> 00:09:32,353
 Artinya ada peluang menemukan elektron di daerah yang secara klasik terlarang.
 
 77
-00:09:18,309 --> 00:09:27,045
+00:09:32,353 --> 00:09:40,433
 Karena gelombangnya menyebar melewati dinding, tingkat energinya lebih rendah daripada kotak tak hingga yang sama lebarnya.
 
 78
-00:09:27,045 --> 00:09:33,894
+00:09:40,433 --> 00:09:47,273
 Jumlah keadaan terikatnya juga terbatas. Sumur yang dangkal dan sempit mungkin hanya punya dua.
 
 79
-00:09:33,894 --> 00:09:42,252
+00:09:47,273 --> 00:09:56,473
 Misalnya untuk parameter z nol sama dengan dua, energinya nol koma dua tujuh dan nol koma sembilan kali V nol.
 
 80
-00:09:42,252 --> 00:09:46,637
+00:09:56,473 --> 00:10:01,233
 Makin dekat energi ke bibir sumur, makin panjang ekornya.
 
 81
-00:09:46,637 --> 00:09:54,452
+00:10:01,233 --> 00:10:08,593
 Dan bila dindingnya tipis, ekor itu bisa mencapai sisi seberang. Di sinilah penerowongan dimulai.
 
 82
-00:09:56,867 --> 00:10:03,316
+00:10:11,000 --> 00:10:17,680
 Bayangkan elektron berenergi satu elektronvolt menabrak penghalang setinggi lima elektronvolt.
 
 83
-00:10:03,316 --> 00:10:10,353
+00:10:17,680 --> 00:10:24,360
 Secara klasik, ia pasti terpantul, seperti bola yang tidak cukup kuat untuk melewati bukit.
 
 84
-00:10:10,353 --> 00:10:18,523
+00:10:24,360 --> 00:10:32,400
 Secara kuantum, gelombangnya masuk ke dalam penghalang dan meluruh, tetapi belum habis ketika sampai di sisi lain.
 
 85
-00:10:18,523 --> 00:10:26,836
+00:10:32,400 --> 00:10:40,400
 Sisa gelombang itu terus merambat. Sebagian elektron menembus penghalang: inilah penerowongan kuantum.
 
 86
-00:10:26,836 --> 00:10:31,032
+00:10:40,400 --> 00:10:44,840
 Peluang tembusnya disebut koefisien transmisi, T.
 
 87
-00:10:31,032 --> 00:10:36,549
+00:10:44,840 --> 00:10:50,640
 Untuk penghalang setebal nol koma dua nanometer, T sekitar empat persen.
 
 88
-00:10:36,549 --> 00:10:46,926
+00:10:50,640 --> 00:11:00,880
 Pertebal menjadi nol koma lima nanometer, dan T anjlok menjadi sembilan per seratus ribu: sekitar empat ratus enam puluh kali lebih kecil.
 
 89
-00:10:46,926 --> 00:10:54,718
+00:11:00,880 --> 00:11:08,600
 Untuk penghalang tebal, T meluruh secara eksponensial terhadap tebalnya, dan terhadap akar massa partikel.
 
 90
-00:10:54,718 --> 00:11:04,151
+00:11:08,600 --> 00:11:17,280
 Penerowongan bukan meminjam energi untuk melompat. Energi totalnya tetap; elektron yang tembus keluar dengan energi yang sama.
 
 91
-00:11:04,151 --> 00:11:11,755
+00:11:17,280 --> 00:11:24,960
 Itulah sebabnya elektron dan atom hidrogen mudah menerowong, sedangkan partikel berat hampir tidak pernah.
 
 92
-00:11:14,167 --> 00:11:19,695
+00:11:27,367 --> 00:11:32,447
 Bagaimana kita mengamati tingkat-tingkat energi ini? Lewat cahaya.
 
 93
-00:11:19,695 --> 00:11:28,608
+00:11:32,447 --> 00:11:41,607
 Elektron di tingkat bawah dapat menyerap foton dan naik ke tingkat atas, asalkan energi fotonnya sama dengan selisih kedua tingkat.
 
 94
-00:11:28,608 --> 00:11:36,478
+00:11:41,607 --> 00:11:50,427
 Delta E sama dengan n akhir kuadrat dikurangi n awal kuadrat, kali h kuadrat per delapan m L kuadrat.
 
 95
-00:11:36,478 --> 00:11:41,640
+00:11:50,427 --> 00:11:56,907
 Dan panjang gelombang fotonnya, lambda, sama dengan h c per delta E.
 
 96
-00:11:41,640 --> 00:11:53,726
+00:11:56,907 --> 00:12:08,907
 Untuk elektron dalam kotak satu nanometer, lompatan satu ke dua butuh satu koma satu tiga elektronvolt: foton inframerah, sekitar seribu seratus nanometer.
 
 97
-00:11:53,726 --> 00:11:56,868
+00:12:08,907 --> 00:12:12,207
 Tapi tidak semua lompatan diizinkan.
 
 98
-00:11:56,868 --> 00:12:04,226
+00:12:12,207 --> 00:12:20,567
 Peluang transisi bergantung pada momen dipol transisi: integral psi akhir, kali x, kali psi awal.
 
 99
-00:12:04,226 --> 00:12:15,391
+00:12:20,567 --> 00:12:32,647
 Untuk satu ke tiga, kedua fungsi simetris terhadap tengah kotak, sehingga sumbangan kiri dan kanan saling menghapus. Integralnya nol: transisi terlarang.
 
 100
-00:12:15,391 --> 00:12:21,039
+00:12:32,647 --> 00:12:38,687
 Untuk satu ke dua, sumbangannya saling menguatkan: transisi diizinkan.
 
 101
-00:12:21,039 --> 00:12:29,152
+00:12:38,687 --> 00:12:47,087
 Aturannya: transisi diizinkan bila jumlah kedua bilangan kuantum ganjil, artinya paritasnya berubah.
 
 102
-00:12:31,567 --> 00:12:37,581
+00:12:49,500 --> 00:12:55,700
 Kotak satu dimensi ternyata ada di dalam molekul: rantai karbon terkonjugasi.
 
 103
-00:12:37,581 --> 00:12:46,694
+00:12:55,700 --> 00:13:05,500
 Pada butadiena, empat orbital p bertumpang tindih membentuk satu jalur, dan empat elektron pi bebas bergerak di sepanjang rantai.
 
 104
-00:12:46,694 --> 00:12:58,958
+00:13:05,500 --> 00:13:17,580
 Kita anggap jalur itu kotak dengan panjang efektif L: panjang rangka ikatannya ditambah satu panjang ikatan untuk kedua ujung, sekitar nol koma lima delapan nanometer.
 
 105
-00:12:58,958 --> 00:13:06,761
+00:13:17,580 --> 00:13:26,180
 Menurut prinsip Pauli, setiap tingkat memuat dua elektron. Empat elektron mengisi n satu dan n dua.
 
 106
-00:13:06,761 --> 00:13:13,222
+00:13:26,180 --> 00:13:32,780
 Tingkat terisi tertinggi disebut HOMO, dan tingkat kosong terendah disebut LUMO.
 
 107
-00:13:13,222 --> 00:13:22,158
+00:13:32,780 --> 00:13:42,140
 Untuk N elektron pi, celah HOMO ke LUMO adalah N tambah satu, kali h kuadrat per delapan m L kuadrat.
 
 108
-00:13:22,158 --> 00:13:34,124
+00:13:42,140 --> 00:13:53,020
 Hasilnya untuk butadiena sekitar dua ratus dua puluh nanometer, di daerah ultraviolet. Pengukuran memberi sekitar dua ratus tujuh belas nanometer.
 
 109
-00:13:34,124 --> 00:13:44,358
+00:13:53,020 --> 00:14:02,900
 Pada heksatriena, enam elektron dalam rantai yang lebih panjang menggeser serapan ke sekitar tiga ratus lima puluh nanometer menurut model ini.
 
 110
-00:13:44,358 --> 00:13:51,727
+00:14:02,900 --> 00:14:10,820
 Polanya jelas: makin panjang konjugasi, makin kecil celahnya, makin panjang gelombang yang diserap.
 
 111
-00:13:51,727 --> 00:14:01,629
+00:14:10,820 --> 00:14:21,460
 Ingat, karbon jenuh memutus jalur. Dua ikatan rangkap yang dipisahkan gugus CH dua bukan satu kotak, melainkan dua kotak kecil.
 
 112
-00:14:04,033 --> 00:14:10,505
+00:14:23,867 --> 00:14:30,147
 Bila rantainya cukup panjang, serapannya masuk ke cahaya tampak, dan molekulnya berwarna.
 
 113
-00:14:10,505 --> 00:14:17,463
+00:14:30,147 --> 00:14:37,067
 Contoh klasiknya pewarna sianin: dua atom nitrogen yang dihubungkan rantai karbon terkonjugasi.
 
 114
-00:14:17,463 --> 00:14:25,821
+00:14:37,067 --> 00:14:45,147
 Pada akhir tahun empat puluhan, Hans Kuhn memodelkan elektron pi pewarna ini sebagai elektron bebas di dalam kotak.
 
 115
-00:14:25,821 --> 00:14:35,678
+00:14:45,147 --> 00:14:55,187
 Setiap tambahan satu gugus CH sama dengan CH memperpanjang kotak, dan puncak serapan bergeser sekitar seratus nanometer ke arah merah.
 
 116
-00:14:35,678 --> 00:14:43,093
+00:14:55,187 --> 00:15:02,187
 Dari sekitar lima ratus dua puluh lima, ke enam ratus lima, lalu tujuh ratus lima nanometer.
 
 117
-00:14:43,093 --> 00:14:53,750
+00:15:02,187 --> 00:15:12,347
 Warna larutannya ikut berubah, dari magenta, ke biru, hingga biru kehijauan, karena mata melihat warna komplementer dari yang diserap.
 
 118
-00:14:53,750 --> 00:15:06,779
+00:15:12,347 --> 00:15:24,827
 Di alam pun begitu: beta-karoten pada wortel punya sebelas ikatan rangkap terkonjugasi, menyerap cahaya biru sekitar empat ratus lima puluh nanometer, sehingga tampak jingga.
 
 119
-00:15:06,779 --> 00:15:16,458
+00:15:24,827 --> 00:15:34,787
 Namun untuk rantai sepanjang itu, model kotak polos meramalkan celah yang terlalu kecil, karena ikatan tunggal dan rangkap tidak sama panjang.
 
 120
-00:15:16,458 --> 00:15:24,251
+00:15:34,787 --> 00:15:43,187
 Jadi model kotak menangkap trennya dengan sangat baik, tetapi angka yang presisi memerlukan model yang lebih lengkap.
 
 121
-00:15:26,667 --> 00:15:33,893
+00:15:45,600 --> 00:15:51,800
 Penerowongan bukan sekadar keanehan teori. Ia terjadi di dalam molekul yang kita kenal.
 
 122
-00:15:33,893 --> 00:15:43,006
+00:15:51,800 --> 00:16:00,560
 Molekul amonia berbentuk piramida, dan atom nitrogennya bisa membalik ke sisi seberang, seperti payung yang tertiup angin.
 
 123
-00:15:43,006 --> 00:15:50,210
+00:16:00,560 --> 00:16:07,080
 Di antara kedua bentuk itu ada penghalang energi sekitar dua puluh lima kilojoule per mol.
 
 124
-00:15:50,210 --> 00:15:59,266
+00:16:07,080 --> 00:16:15,880
 Molekul itu tidak melompati penghalang; ia menerowong, bolak-balik sekitar dua puluh empat miliar kali per detik.
 
 125
-00:15:59,266 --> 00:16:06,658
+00:16:15,880 --> 00:16:23,200
 Frekuensi sekitar dua puluh empat gigahertz ini dipakai pada jam atom pertama dan maser amonia.
 
 126
-00:16:06,658 --> 00:16:15,406
+00:16:23,200 --> 00:16:31,360
 Ganti hidrogen dengan deuterium, dan pembalikannya melambat sekitar lima belas kali, karena massanya lebih besar.
 
 127
-00:16:15,406 --> 00:16:20,056
+00:16:31,360 --> 00:16:35,860
 Hal serupa terjadi pada reaksi transfer hidrogen di dalam enzim.
 
 128
-00:16:20,056 --> 00:16:34,275
+00:16:35,860 --> 00:16:49,220
 Pada enzim lipoksigenase dari kedelai, mengganti hidrogen dengan deuterium memperlambat reaksi sekitar delapan puluh kali, padahal teori klasik memperkirakan paling banyak sekitar tujuh kali.
 
 129
-00:16:34,275 --> 00:16:42,576
+00:16:49,220 --> 00:16:57,460
 Selisih besar itu adalah sidik jari penerowongan: atom hidrogen menembus penghalang, bukan melompatinya.
 
 130
-00:16:44,967 --> 00:16:48,674
+00:16:59,867 --> 00:17:03,167
 Kembali ke botol-botol berpendar di awal video.
 
 131
-00:16:48,674 --> 00:16:56,953
+00:17:03,167 --> 00:17:11,287
 Butiran kadmium selenida itu adalah titik kuantum: kristal semikonduktor berukuran beberapa nanometer.
 
 132
-00:16:56,953 --> 00:17:05,489
+00:17:11,287 --> 00:17:19,487
 Elektron dan hole yang tercipta saat menyerap cahaya terkurung di dalam butir, seperti partikel dalam kotak tiga dimensi.
 
 133
-00:17:05,489 --> 00:17:14,790
+00:17:19,487 --> 00:17:29,167
 Energi cahaya yang dipancarkan sama dengan celah pita bahan, ditambah energi pengurungan yang sebanding dengan satu per L kuadrat.
 
 134
-00:17:14,790 --> 00:17:22,451
+00:17:29,167 --> 00:17:37,247
 Butir kecil, pengurungan kuat, cahaya biru. Butir besar, pengurungan lemah, cahaya merah.
 
 135
-00:17:22,451 --> 00:17:28,723
+00:17:37,247 --> 00:17:43,687
 Dengan mengatur waktu pertumbuhan kristal, pabrik dapat memilih warna dengan sangat presisi.
 
 136
-00:17:28,723 --> 00:17:37,636
+00:17:43,687 --> 00:17:52,767
 Di layar televisi QLED, lapisan titik kuantum mengubah cahaya LED biru menjadi merah dan hijau yang sangat murni.
 
 137
-00:17:37,636 --> 00:17:45,228
+00:17:52,767 --> 00:18:00,487
 Kini banyak produsen memakai titik kuantum indium fosfida yang bebas kadmium, karena kadmium beracun.
 
 138
-00:17:45,228 --> 00:17:57,006
+00:18:00,487 --> 00:18:11,607
 Penemuan dan sintesis titik kuantum diganjar Hadiah Nobel Kimia tahun dua ribu dua puluh tiga, untuk Alexei Ekimov, Louis Brus, dan Moungi Bawendi.
 
 139
-00:17:59,400 --> 00:18:04,340
+00:18:14,000 --> 00:18:18,840
 Penerowongan juga memungkinkan kita melihat atom satu per satu.
 
 140
-00:18:04,340 --> 00:18:14,774
+00:18:18,840 --> 00:18:29,360
 Pada mikroskop penerowongan, atau STM, ujung jarum logam yang sangat runcing didekatkan ke permukaan hingga celahnya kurang dari satu nanometer.
 
 141
-00:18:14,774 --> 00:18:23,143
+00:18:29,360 --> 00:18:38,120
 Celah vakum itu adalah penghalang. Dengan tegangan kecil, elektron menerowong dan menghasilkan arus yang sangat lemah.
 
 142
-00:18:23,143 --> 00:18:33,955
+00:18:38,120 --> 00:18:47,640
 Karena peluang tembus meluruh secara eksponensial, arus berubah sekitar sepuluh kali untuk setiap perubahan jarak nol koma satu nanometer.
 
 143
-00:18:33,955 --> 00:18:43,057
+00:18:47,640 --> 00:18:57,040
 Sistem umpan balik menjaga arus tetap dengan menaikkan atau menurunkan jarum, dan gerakan jarum itu memetakan atom demi atom.
 
 144
-00:18:43,057 --> 00:18:53,313
+00:18:57,040 --> 00:19:06,880
 Penemunya, Gerd Binnig dan Heinrich Rohrer dari IBM Zürich, menerima Hadiah Nobel Fisika tahun seribu sembilan ratus delapan puluh enam.
 
 145
-00:18:53,313 --> 00:19:02,981
+00:19:06,880 --> 00:19:15,800
 Pada tahun sembilan puluh tiga, peneliti IBM menyusun empat puluh delapan atom besi menjadi cincin di atas permukaan tembaga.
 
 146
-00:19:02,981 --> 00:19:13,626
+00:19:15,800 --> 00:19:26,360
 Di dalam pagar kuantum itu, elektron permukaan membentuk gelombang berdiri, persis seperti partikel di dalam kotak, hanya saja kotaknya melingkar.
 
 147
-00:19:16,033 --> 00:19:21,670
+00:19:28,767 --> 00:19:34,727
 Di saku kita pun ada penerowongan: di dalam memori flash ponsel dan flashdisk.
 
 148
-00:19:21,670 --> 00:19:30,137
+00:19:34,727 --> 00:19:43,167
 Setiap sel memori adalah transistor dengan gerbang mengambang: sepotong silikon yang dikelilingi lapisan oksida tipis.
 
 149
-00:19:30,137 --> 00:19:40,228
+00:19:43,167 --> 00:19:52,687
 Oksida itu adalah penghalang. Dalam keadaan biasa, elektron di dalam gerbang tidak bisa keluar, bahkan selama bertahun-tahun.
 
 150
-00:19:40,228 --> 00:19:49,353
+00:19:52,687 --> 00:20:01,607
 Untuk menulis data, diberikan tegangan tinggi, sekitar dua puluh volt, yang memiringkan penghalang sehingga menjadi lebih tipis.
 
 151
-00:19:49,353 --> 00:19:56,590
+00:20:01,607 --> 00:20:09,207
 Elektron pun menerowong masuk ke gerbang mengambang. Proses ini disebut penerowongan Fowler-Nordheim.
 
 152
-00:19:56,590 --> 00:20:03,428
+00:20:09,207 --> 00:20:16,447
 Ada elektron yang terperangkap berarti satu nilai bit, tidak ada elektron berarti nilai lainnya.
 
 153
-00:20:03,428 --> 00:20:09,145
+00:20:16,447 --> 00:20:22,327
 Untuk menghapus, tegangannya dibalik, dan elektron menerowong keluar lagi.
 
 154
-00:20:09,145 --> 00:20:22,232
+00:20:22,327 --> 00:20:34,727
 Oksida itu harus cukup tipis untuk ditembus saat menulis, tetapi cukup tebal untuk menahan saat menyimpan, sehingga tebalnya hanya beberapa nanometer dan diatur sangat teliti.
 
 155
-00:20:24,633 --> 00:20:27,875
+00:20:37,133 --> 00:20:40,053
 Mari kita rangkai seluruh perjalanannya.
 
 156
-00:20:27,875 --> 00:20:33,312
+00:20:40,053 --> 00:20:45,813
 Partikel bebas boleh memiliki energi berapa saja; spektrumnya kontinu.
 
 157
-00:20:33,312 --> 00:20:41,779
+00:20:45,813 --> 00:20:55,013
 Dinding memaksakan syarat batas, dan syarat batas melahirkan kuantisasi: E n sebanding dengan n kuadrat per L kuadrat.
 
 158
-00:20:41,779 --> 00:20:49,937
+00:20:55,013 --> 00:21:03,413
 Partikel yang terkurung tak pernah diam, memiliki simpul, dan pada dua atau tiga dimensi memiliki degenerasi.
 
 159
-00:20:49,937 --> 00:20:56,009
+00:21:03,413 --> 00:21:09,653
 Dinding berhingga memberi ekor, dan ekor yang menembus dinding tipis adalah penerowongan.
 
 160
-00:20:56,009 --> 00:21:03,424
+00:21:09,653 --> 00:21:17,253
 Dalam kimia, kotak ini menjelaskan serapan elektron pi, warna pewarna, dan reaksi transfer hidrogen.
 
 161
-00:21:03,424 --> 00:21:12,017
+00:21:17,253 --> 00:21:25,813
 Dalam industri, ia menjadi titik kuantum di layar, mikroskop yang melihat atom, dan memori di saku kita.
 
 162
-00:21:12,017 --> 00:21:15,913
+00:21:25,813 --> 00:21:29,633
 Jadi, lain kali kamu melihat layar yang berwarna cerah,
 
 163
-00:21:15,913 --> 00:21:22,939
+00:21:29,633 --> 00:21:36,353
 ingatlah bahwa warnanya ditentukan oleh seberapa besar kotak tempat sebuah elektron dikurung.
