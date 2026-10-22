@@ -1,6 +1,6 @@
 # Naskah Voice-Over — *Partikel dalam Kotak*
 
-Durasi total **21:53** (1313.8 dtk) · 2374 kata · tempo baca ±5.3 suku kata/detik (±126 kata/menit saat berbicara).
+Durasi total **21:53** (1314.0 dtk) · 2375 kata · tempo baca ±5.3 suku kata/detik (±126 kata/menit saat berbicara).
 
 Cara memakai: baca setiap baris tepat pada timecode-nya. Tanda **[jeda x dtk]** adalah ruang hening agar animasi sempat "bernapas". 
 Kata **tebal** adalah kata kunci yang disorot di layar — beri sedikit penekanan. 
@@ -296,121 +296,121 @@ Bila ingin merekam per baris, beri nama file sesuai kode baris (mis. `hook-00.mp
 
 `14:45.1` `dyes-03` Setiap tambahan satu gugus CH sama dengan CH memperpanjang kotak, dan puncak serapan bergeser sekitar **seratus nanometer** ke arah merah. *[9.4 dtk]* **[jeda 0.6 dtk]**
 
-`14:55.1` `dyes-04` Dari sekitar lima ratus dua puluh lima, ke enam ratus lima, lalu tujuh ratus lima nanometer. *[6.4 dtk]* **[jeda 0.6 dtk]**
+`14:55.1` `dyes-04` Dari sekitar lima ratus dua puluh empat, ke enam ratus empat belas, lalu tujuh ratus tujuh nanometer. *[6.7 dtk]* **[jeda 0.6 dtk]**
 
-`15:02.1` `dyes-05` Warna larutannya ikut berubah, dari magenta, ke biru, hingga biru kehijauan, karena mata melihat **warna komplementer** dari yang diserap. *[9.4 dtk]* **[jeda 0.8 dtk]**
+`15:02.5` `dyes-05` Warna larutannya ikut berubah, dari magenta, ke biru, hingga biru kehijauan, karena mata melihat **warna komplementer** dari yang diserap. *[9.4 dtk]* **[jeda 0.8 dtk]**
 
-`15:12.3` `dyes-06` Di alam pun begitu: **beta-karoten** pada wortel punya sebelas ikatan rangkap terkonjugasi, menyerap cahaya biru sekitar empat ratus lima puluh nanometer, sehingga tampak jingga. *[11.7 dtk]* **[jeda 0.8 dtk]**
+`15:12.6` `dyes-06` Di alam pun begitu: **beta-karoten** pada wortel punya sebelas ikatan rangkap terkonjugasi, menyerap cahaya biru sekitar empat ratus lima puluh nanometer, sehingga tampak jingga. *[11.7 dtk]* **[jeda 0.8 dtk]**
 
-`15:24.8` `dyes-07` Namun untuk rantai sepanjang itu, model kotak polos meramalkan celah yang **terlalu kecil,** karena ikatan tunggal dan rangkap tidak sama panjang. *[9.4 dtk]* **[jeda 0.6 dtk]**
+`15:25.1` `dyes-07` Namun untuk rantai sepanjang itu, model kotak polos meramalkan celah yang **terlalu kecil,** karena ikatan tunggal dan rangkap tidak sama panjang. *[9.4 dtk]* **[jeda 0.6 dtk]**
 
-`15:34.7` `dyes-08` Jadi model kotak menangkap **trennya** dengan sangat baik, tetapi angka yang presisi memerlukan model yang lebih lengkap. *[7.6 dtk]* **[jeda 0.8 dtk]**
+`15:35.1` `dyes-08` Jadi model kotak menangkap **trennya** dengan sangat baik, tetapi angka yang presisi memerlukan model yang lebih lengkap. *[7.6 dtk]* **[jeda 0.8 dtk]**
 
 ## 15:44 — Bab 13 · Penerowongan dalam molekul
 
 *(buka dengan hening 1.0 dtk)*
 
-`15:45.6` `chemtunnel-00` Penerowongan bukan sekadar keanehan teori. Ia terjadi di dalam molekul yang kita kenal. *[5.6 dtk]* **[jeda 0.6 dtk]**
+`15:45.8` `chemtunnel-00` Penerowongan bukan sekadar keanehan teori. Ia terjadi di dalam molekul yang kita kenal. *[5.6 dtk]* **[jeda 0.6 dtk]**
 
-`15:51.8` `chemtunnel-01` Molekul amonia berbentuk piramida, dan atom nitrogennya bisa **membalik** ke sisi seberang, seperti payung yang tertiup angin. *[8.2 dtk]* **[jeda 0.6 dtk]**
+`15:52.1` `chemtunnel-01` Molekul amonia berbentuk piramida, dan atom nitrogennya bisa **membalik** ke sisi seberang, seperti payung yang tertiup angin. *[8.2 dtk]* **[jeda 0.6 dtk]**
 
-`16:00.5` `chemtunnel-02` Di antara kedua bentuk itu ada penghalang energi sekitar dua puluh lima kilojoule per mol. *[5.9 dtk]* **[jeda 0.6 dtk]**
+`16:00.8` `chemtunnel-02` Di antara kedua bentuk itu ada penghalang energi sekitar dua puluh empat kilojoule per mol. *[5.8 dtk]* **[jeda 0.6 dtk]**
 
-`16:07.0` `chemtunnel-03` Molekul itu tidak melompati penghalang; ia **menerowong,** bolak-balik sekitar dua puluh empat miliar kali per detik. *[8.0 dtk]* **[jeda 0.8 dtk]**
+`16:07.3` `chemtunnel-03` Molekul itu tidak melompati penghalang; ia **menerowong,** bolak-balik sekitar dua puluh empat miliar kali per detik. *[8.0 dtk]* **[jeda 0.8 dtk]**
 
-`16:15.8` `chemtunnel-04` Frekuensi sekitar dua puluh empat gigahertz ini dipakai pada jam atom pertama dan **maser amonia.** *[6.7 dtk]* **[jeda 0.6 dtk]**
+`16:16.1` `chemtunnel-04` Frekuensi sekitar dua puluh empat gigahertz ini dipakai pada jam atom pertama dan **maser amonia.** *[6.7 dtk]* **[jeda 0.6 dtk]**
 
-`16:23.2` `chemtunnel-05` Ganti hidrogen dengan deuterium, dan pembalikannya melambat sekitar **lima belas kali,** karena massanya lebih besar. *[7.4 dtk]* **[jeda 0.8 dtk]**
+`16:23.4` `chemtunnel-05` Ganti hidrogen dengan deuterium, dan pembalikannya melambat sekitar **lima belas kali,** karena massanya lebih besar. *[7.4 dtk]* **[jeda 0.8 dtk]**
 
-`16:31.3` `chemtunnel-06` Hal serupa terjadi pada reaksi transfer hidrogen di dalam **enzim.** *[4.0 dtk]* **[jeda 0.5 dtk]**
+`16:31.5` `chemtunnel-06` Hal serupa terjadi pada reaksi transfer hidrogen di dalam **enzim.** *[4.0 dtk]* **[jeda 0.5 dtk]**
 
-`16:35.8` `chemtunnel-07` Pada enzim lipoksigenase dari kedelai, mengganti hidrogen dengan deuterium memperlambat reaksi sekitar **delapan puluh kali,** padahal teori klasik memperkirakan paling banyak sekitar tujuh kali. *[12.6 dtk]* **[jeda 0.8 dtk]**
+`16:36.0` `chemtunnel-07` Pada enzim lipoksigenase dari kedelai, mengganti hidrogen dengan deuterium memperlambat reaksi sekitar **delapan puluh kali,** padahal teori klasik memperkirakan paling banyak sekitar tujuh kali. *[12.6 dtk]* **[jeda 0.8 dtk]**
 
-`16:49.2` `chemtunnel-08` Selisih besar itu adalah **sidik jari penerowongan:** atom hidrogen menembus penghalang, bukan melompatinya. *[7.4 dtk]* **[jeda 0.8 dtk]**
+`16:49.4` `chemtunnel-08` Selisih besar itu adalah **sidik jari penerowongan:** atom hidrogen menembus penghalang, bukan melompatinya. *[7.4 dtk]* **[jeda 0.8 dtk]**
 
-## 16:58 — Bab 14 · Titik kuantum
+## 16:59 — Bab 14 · Titik kuantum
 
 *(buka dengan hening 1.0 dtk)*
 
-`16:59.8` `qdot-00` Kembali ke botol-botol berpendar di awal video. *[2.8 dtk]* **[jeda 0.5 dtk]**
+`17:00.0` `qdot-00` Kembali ke botol-botol berpendar di awal video. *[2.8 dtk]* **[jeda 0.5 dtk]**
 
-`17:03.1` `qdot-01` Butiran kadmium selenida itu adalah **titik kuantum:** kristal semikonduktor berukuran beberapa nanometer. *[7.5 dtk]* **[jeda 0.6 dtk]**
+`17:03.3` `qdot-01` Butiran kadmium selenida itu adalah **titik kuantum:** kristal semikonduktor berukuran beberapa nanometer. *[7.5 dtk]* **[jeda 0.6 dtk]**
 
-`17:11.2` `qdot-02` Elektron dan hole yang tercipta saat menyerap cahaya **terkurung** di dalam butir, seperti partikel dalam kotak tiga dimensi. *[7.6 dtk]* **[jeda 0.6 dtk]**
+`17:11.4` `qdot-02` Elektron dan hole yang tercipta saat menyerap cahaya **terkurung** di dalam butir, seperti partikel dalam kotak tiga dimensi. *[7.6 dtk]* **[jeda 0.6 dtk]**
 
-`17:19.4` `qdot-03` Energi cahaya yang dipancarkan sama dengan celah pita bahan, ditambah energi pengurungan yang sebanding dengan **satu per L kuadrat.** *[8.9 dtk]* **[jeda 0.8 dtk]**
+`17:19.6` `qdot-03` Energi cahaya yang dipancarkan sama dengan celah pita bahan, ditambah energi pengurungan yang sebanding dengan **satu per L kuadrat.** *[8.9 dtk]* **[jeda 0.8 dtk]**
 
-`17:29.1` `qdot-04` Butir kecil, pengurungan kuat, **cahaya biru.** Butir besar, pengurungan lemah, **cahaya merah.** *[7.3 dtk]* **[jeda 0.8 dtk]**
+`17:29.3` `qdot-04` Butir kecil, pengurungan kuat, **cahaya biru.** Butir besar, pengurungan lemah, **cahaya merah.** *[7.3 dtk]* **[jeda 0.8 dtk]**
 
-`17:37.2` `qdot-05` Dengan mengatur waktu pertumbuhan kristal, pabrik dapat **memilih warna** dengan sangat presisi. *[5.8 dtk]* **[jeda 0.6 dtk]**
+`17:37.4` `qdot-05` Dengan mengatur waktu pertumbuhan kristal, pabrik dapat **memilih warna** dengan sangat presisi. *[5.8 dtk]* **[jeda 0.6 dtk]**
 
-`17:43.6` `qdot-06` Di layar televisi **QLED,** lapisan titik kuantum mengubah cahaya LED biru menjadi merah dan hijau yang sangat murni. *[8.5 dtk]* **[jeda 0.6 dtk]**
+`17:43.8` `qdot-06` Di layar televisi **QLED,** lapisan titik kuantum mengubah cahaya LED biru menjadi merah dan hijau yang sangat murni. *[8.5 dtk]* **[jeda 0.6 dtk]**
 
-`17:52.7` `qdot-07` Kini banyak produsen memakai titik kuantum indium fosfida yang **bebas kadmium,** karena kadmium beracun. *[7.1 dtk]* **[jeda 0.6 dtk]**
+`17:52.9` `qdot-07` Kini banyak produsen memakai titik kuantum indium fosfida yang **bebas kadmium,** karena kadmium beracun. *[7.1 dtk]* **[jeda 0.6 dtk]**
 
-`18:00.4` `qdot-08` Penemuan dan sintesis titik kuantum diganjar Hadiah **Nobel Kimia** tahun dua ribu dua puluh tiga, untuk Alexei Ekimov, Louis Brus, dan Moungi Bawendi. *[10.3 dtk]* **[jeda 0.8 dtk]**
+`18:00.6` `qdot-08` Penemuan dan sintesis titik kuantum diganjar Hadiah **Nobel Kimia** tahun dua ribu dua puluh tiga, untuk Alexei Ekimov, Louis Brus, dan Moungi Bawendi. *[10.3 dtk]* **[jeda 0.8 dtk]**
 
 ## 18:13 — Bab 15 · Mikroskop penerowongan
 
 *(buka dengan hening 1.0 dtk)*
 
-`18:14.0` `stm-00` Penerowongan juga memungkinkan kita **melihat atom** satu per satu. *[4.2 dtk]* **[jeda 0.6 dtk]**
+`18:14.2` `stm-00` Penerowongan juga memungkinkan kita **melihat atom** satu per satu. *[4.2 dtk]* **[jeda 0.6 dtk]**
 
-`18:18.8` `stm-01` Pada mikroskop penerowongan, atau **STM,** ujung jarum logam yang sangat runcing didekatkan ke permukaan hingga celahnya kurang dari satu nanometer. *[9.9 dtk]* **[jeda 0.6 dtk]**
+`18:19.0` `stm-01` Pada mikroskop penerowongan, atau **STM,** ujung jarum logam yang sangat runcing didekatkan ke permukaan hingga celahnya kurang dari satu nanometer. *[9.9 dtk]* **[jeda 0.6 dtk]**
 
-`18:29.3` `stm-02` Celah vakum itu adalah penghalang. Dengan tegangan kecil, elektron **menerowong** dan menghasilkan arus yang sangat lemah. *[8.2 dtk]* **[jeda 0.6 dtk]**
+`18:29.5` `stm-02` Celah vakum itu adalah penghalang. Dengan tegangan kecil, elektron **menerowong** dan menghasilkan arus yang sangat lemah. *[8.2 dtk]* **[jeda 0.6 dtk]**
 
-`18:38.1` `stm-03` Karena peluang tembus meluruh secara eksponensial, arus berubah sekitar **sepuluh kali** untuk setiap perubahan jarak nol koma satu nanometer. *[8.7 dtk]* **[jeda 0.8 dtk]**
+`18:38.3` `stm-03` Karena peluang tembus meluruh secara eksponensial, arus berubah sekitar **sepuluh kali** untuk setiap perubahan jarak nol koma satu nanometer. *[8.7 dtk]* **[jeda 0.8 dtk]**
 
-`18:47.6` `stm-04` Sistem umpan balik menjaga arus tetap dengan menaikkan atau menurunkan jarum, dan gerakan jarum itu memetakan **atom demi atom.** *[8.8 dtk]* **[jeda 0.6 dtk]**
+`18:47.8` `stm-04` Sistem umpan balik menjaga arus tetap dengan menaikkan atau menurunkan jarum, dan gerakan jarum itu memetakan **atom demi atom.** *[8.8 dtk]* **[jeda 0.6 dtk]**
 
-`18:57.0` `stm-05` Penemunya, Gerd Binnig dan Heinrich Rohrer dari IBM Zürich, menerima Hadiah Nobel Fisika tahun seribu sembilan ratus delapan puluh enam. *[9.0 dtk]* **[jeda 0.8 dtk]**
+`18:57.2` `stm-05` Penemunya, Gerd Binnig dan Heinrich Rohrer dari IBM Zürich, menerima Hadiah Nobel Fisika tahun seribu sembilan ratus delapan puluh enam. *[9.0 dtk]* **[jeda 0.8 dtk]**
 
-`19:06.8` `stm-06` Pada tahun sembilan puluh tiga, peneliti IBM menyusun **empat puluh delapan atom besi** menjadi cincin di atas permukaan tembaga. *[8.3 dtk]* **[jeda 0.6 dtk]**
+`19:07.0` `stm-06` Pada tahun sembilan puluh tiga, peneliti IBM menyusun **empat puluh delapan atom besi** menjadi cincin di atas permukaan tembaga. *[8.3 dtk]* **[jeda 0.6 dtk]**
 
-`19:15.7` `stm-07` Di dalam pagar kuantum itu, elektron permukaan membentuk **gelombang berdiri,** persis seperti partikel di dalam kotak, hanya saja kotaknya melingkar. *[9.8 dtk]* **[jeda 0.8 dtk]**
+`19:15.9` `stm-07` Di dalam pagar kuantum itu, elektron permukaan membentuk **gelombang berdiri,** persis seperti partikel di dalam kotak, hanya saja kotaknya melingkar. *[9.8 dtk]* **[jeda 0.8 dtk]**
 
 ## 19:27 — Bab 16 · Memori flash
 
 *(buka dengan hening 1.0 dtk)*
 
-`19:28.7` `flash-00` Di saku kita pun ada penerowongan: di dalam **memori flash** ponsel dan flashdisk. *[5.4 dtk]* **[jeda 0.6 dtk]**
+`19:28.9` `flash-00` Di saku kita pun ada penerowongan: di dalam **memori flash** ponsel dan flashdisk. *[5.4 dtk]* **[jeda 0.6 dtk]**
 
-`19:34.7` `flash-01` Setiap sel memori adalah transistor dengan **gerbang mengambang:** sepotong silikon yang dikelilingi lapisan oksida tipis. *[7.8 dtk]* **[jeda 0.6 dtk]**
+`19:34.9` `flash-01` Setiap sel memori adalah transistor dengan **gerbang mengambang:** sepotong silikon yang dikelilingi lapisan oksida tipis. *[7.8 dtk]* **[jeda 0.6 dtk]**
 
-`19:43.1` `flash-02` Oksida itu adalah penghalang. Dalam keadaan biasa, elektron di dalam gerbang tidak bisa keluar, bahkan selama **bertahun-tahun.** *[8.7 dtk]* **[jeda 0.8 dtk]**
+`19:43.3` `flash-02` Oksida itu adalah penghalang. Dalam keadaan biasa, elektron di dalam gerbang tidak bisa keluar, bahkan selama **bertahun-tahun.** *[8.7 dtk]* **[jeda 0.8 dtk]**
 
-`19:52.6` `flash-03` Untuk menulis data, diberikan tegangan tinggi, sekitar dua puluh volt, yang **memiringkan penghalang** sehingga menjadi lebih tipis. *[8.3 dtk]* **[jeda 0.6 dtk]**
+`19:52.8` `flash-03` Untuk menulis data, diberikan tegangan tinggi, sekitar dua puluh volt, yang **memiringkan penghalang** sehingga menjadi lebih tipis. *[8.3 dtk]* **[jeda 0.6 dtk]**
 
-`20:01.6` `flash-04` Elektron pun menerowong masuk ke gerbang mengambang. Proses ini disebut penerowongan **Fowler-Nordheim.** *[6.8 dtk]* **[jeda 0.8 dtk]**
+`20:01.8` `flash-04` Elektron pun menerowong masuk ke gerbang mengambang. Proses ini disebut penerowongan **Fowler-Nordheim.** *[6.8 dtk]* **[jeda 0.8 dtk]**
 
-`20:09.2` `flash-05` Ada elektron yang terperangkap berarti satu nilai bit, tidak ada elektron berarti nilai lainnya. *[6.6 dtk]* **[jeda 0.6 dtk]**
+`20:09.4` `flash-05` Ada elektron yang terperangkap berarti satu nilai bit, tidak ada elektron berarti nilai lainnya. *[6.6 dtk]* **[jeda 0.6 dtk]**
 
-`20:16.4` `flash-06` Untuk menghapus, tegangannya dibalik, dan elektron menerowong keluar lagi. *[5.3 dtk]* **[jeda 0.6 dtk]**
+`20:16.6` `flash-06` Untuk menghapus, tegangannya dibalik, dan elektron menerowong keluar lagi. *[5.3 dtk]* **[jeda 0.6 dtk]**
 
-`20:22.3` `flash-07` Oksida itu harus cukup tipis untuk ditembus saat menulis, tetapi cukup tebal untuk menahan saat menyimpan, sehingga tebalnya hanya **beberapa nanometer** dan diatur sangat teliti. *[11.6 dtk]* **[jeda 0.8 dtk]**
+`20:22.5` `flash-07` Oksida itu harus cukup tipis untuk ditembus saat menulis, tetapi cukup tebal untuk menahan saat menyimpan, sehingga tebalnya hanya **beberapa nanometer** dan diatur sangat teliti. *[11.6 dtk]* **[jeda 0.8 dtk]**
 
 ## 20:36 — Bab 17 · Merangkai semuanya
 
 *(buka dengan hening 1.0 dtk)*
 
-`20:37.1` `recap-00` Mari kita rangkai seluruh perjalanannya. *[2.3 dtk]* **[jeda 0.6 dtk]**
+`20:37.3` `recap-00` Mari kita rangkai seluruh perjalanannya. *[2.3 dtk]* **[jeda 0.6 dtk]**
 
-`20:40.0` `recap-01` Partikel bebas boleh memiliki energi berapa saja; spektrumnya **kontinu.** *[5.4 dtk]* **[jeda 0.4 dtk]**
+`20:40.2` `recap-01` Partikel bebas boleh memiliki energi berapa saja; spektrumnya **kontinu.** *[5.4 dtk]* **[jeda 0.4 dtk]**
 
-`20:45.8` `recap-02` Dinding memaksakan syarat batas, dan syarat batas melahirkan **kuantisasi:** E n sebanding dengan n kuadrat per L kuadrat. *[8.8 dtk]* **[jeda 0.4 dtk]**
+`20:46.0` `recap-02` Dinding memaksakan syarat batas, dan syarat batas melahirkan **kuantisasi:** E n sebanding dengan n kuadrat per L kuadrat. *[8.8 dtk]* **[jeda 0.4 dtk]**
 
-`20:55.0` `recap-03` Partikel yang terkurung tak pernah diam, memiliki simpul, dan pada dua atau tiga dimensi memiliki **degenerasi.** *[8.0 dtk]* **[jeda 0.4 dtk]**
+`20:55.2` `recap-03` Partikel yang terkurung tak pernah diam, memiliki simpul, dan pada dua atau tiga dimensi memiliki **degenerasi.** *[8.0 dtk]* **[jeda 0.4 dtk]**
 
-`21:03.4` `recap-04` Dinding berhingga memberi ekor, dan ekor yang menembus dinding tipis adalah **penerowongan.** *[5.8 dtk]* **[jeda 0.4 dtk]**
+`21:03.6` `recap-04` Dinding berhingga memberi ekor, dan ekor yang menembus dinding tipis adalah **penerowongan.** *[5.8 dtk]* **[jeda 0.4 dtk]**
 
-`21:09.6` `recap-05` Dalam kimia, kotak ini menjelaskan serapan elektron pi, **warna pewarna,** dan reaksi transfer hidrogen. *[7.2 dtk]* **[jeda 0.4 dtk]**
+`21:09.8` `recap-05` Dalam kimia, kotak ini menjelaskan serapan elektron pi, **warna pewarna,** dan reaksi transfer hidrogen. *[7.2 dtk]* **[jeda 0.4 dtk]**
 
-`21:17.2` `recap-06` Dalam industri, ia menjadi **titik kuantum** di layar, mikroskop yang melihat atom, dan memori di saku kita. *[7.4 dtk]* **[jeda 1.2 dtk]**
+`21:17.4` `recap-06` Dalam industri, ia menjadi **titik kuantum** di layar, mikroskop yang melihat atom, dan memori di saku kita. *[7.4 dtk]* **[jeda 1.2 dtk]**
 
-`21:25.8` `recap-07` Jadi, lain kali kamu melihat layar yang berwarna cerah, *[3.5 dtk]* **[jeda 0.3 dtk]**
+`21:26.0` `recap-07` Jadi, lain kali kamu melihat layar yang berwarna cerah, *[3.5 dtk]* **[jeda 0.3 dtk]**
 
-`21:29.6` `recap-08` ingatlah bahwa warnanya ditentukan oleh **seberapa besar kotak** tempat sebuah elektron dikurung. *[5.9 dtk]* **[jeda 0.8 dtk]**
+`21:29.8` `recap-08` ingatlah bahwa warnanya ditentukan oleh **seberapa besar kotak** tempat sebuah elektron dikurung. *[5.9 dtk]* **[jeda 0.8 dtk]**
 
 ## 21:38 — Penutup
 

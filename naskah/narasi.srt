@@ -459,193 +459,193 @@ Pada akhir tahun empat puluhan, Hans Kuhn memodelkan elektron pi pewarna ini seb
 Setiap tambahan satu gugus CH sama dengan CH memperpanjang kotak, dan puncak serapan bergeser sekitar seratus nanometer ke arah merah.
 
 116
-00:14:55,187 --> 00:15:02,187
-Dari sekitar lima ratus dua puluh lima, ke enam ratus lima, lalu tujuh ratus lima nanometer.
+00:14:55,187 --> 00:15:02,507
+Dari sekitar lima ratus dua puluh empat, ke enam ratus empat belas, lalu tujuh ratus tujuh nanometer.
 
 117
-00:15:02,187 --> 00:15:12,347
+00:15:02,507 --> 00:15:12,667
 Warna larutannya ikut berubah, dari magenta, ke biru, hingga biru kehijauan, karena mata melihat warna komplementer dari yang diserap.
 
 118
-00:15:12,347 --> 00:15:24,827
+00:15:12,667 --> 00:15:25,147
 Di alam pun begitu: beta-karoten pada wortel punya sebelas ikatan rangkap terkonjugasi, menyerap cahaya biru sekitar empat ratus lima puluh nanometer, sehingga tampak jingga.
 
 119
-00:15:24,827 --> 00:15:34,787
+00:15:25,147 --> 00:15:35,107
 Namun untuk rantai sepanjang itu, model kotak polos meramalkan celah yang terlalu kecil, karena ikatan tunggal dan rangkap tidak sama panjang.
 
 120
-00:15:34,787 --> 00:15:43,187
+00:15:35,107 --> 00:15:43,507
 Jadi model kotak menangkap trennya dengan sangat baik, tetapi angka yang presisi memerlukan model yang lebih lengkap.
 
 121
-00:15:45,600 --> 00:15:51,800
+00:15:45,900 --> 00:15:52,100
 Penerowongan bukan sekadar keanehan teori. Ia terjadi di dalam molekul yang kita kenal.
 
 122
-00:15:51,800 --> 00:16:00,560
+00:15:52,100 --> 00:16:00,860
 Molekul amonia berbentuk piramida, dan atom nitrogennya bisa membalik ke sisi seberang, seperti payung yang tertiup angin.
 
 123
-00:16:00,560 --> 00:16:07,080
-Di antara kedua bentuk itu ada penghalang energi sekitar dua puluh lima kilojoule per mol.
+00:16:00,860 --> 00:16:07,300
+Di antara kedua bentuk itu ada penghalang energi sekitar dua puluh empat kilojoule per mol.
 
 124
-00:16:07,080 --> 00:16:15,880
+00:16:07,300 --> 00:16:16,100
 Molekul itu tidak melompati penghalang; ia menerowong, bolak-balik sekitar dua puluh empat miliar kali per detik.
 
 125
-00:16:15,880 --> 00:16:23,200
+00:16:16,100 --> 00:16:23,420
 Frekuensi sekitar dua puluh empat gigahertz ini dipakai pada jam atom pertama dan maser amonia.
 
 126
-00:16:23,200 --> 00:16:31,360
+00:16:23,420 --> 00:16:31,580
 Ganti hidrogen dengan deuterium, dan pembalikannya melambat sekitar lima belas kali, karena massanya lebih besar.
 
 127
-00:16:31,360 --> 00:16:35,860
+00:16:31,580 --> 00:16:36,080
 Hal serupa terjadi pada reaksi transfer hidrogen di dalam enzim.
 
 128
-00:16:35,860 --> 00:16:49,220
+00:16:36,080 --> 00:16:49,440
 Pada enzim lipoksigenase dari kedelai, mengganti hidrogen dengan deuterium memperlambat reaksi sekitar delapan puluh kali, padahal teori klasik memperkirakan paling banyak sekitar tujuh kali.
 
 129
-00:16:49,220 --> 00:16:57,460
+00:16:49,440 --> 00:16:57,680
 Selisih besar itu adalah sidik jari penerowongan: atom hidrogen menembus penghalang, bukan melompatinya.
 
 130
-00:16:59,867 --> 00:17:03,167
+00:17:00,067 --> 00:17:03,367
 Kembali ke botol-botol berpendar di awal video.
 
 131
-00:17:03,167 --> 00:17:11,287
+00:17:03,367 --> 00:17:11,487
 Butiran kadmium selenida itu adalah titik kuantum: kristal semikonduktor berukuran beberapa nanometer.
 
 132
-00:17:11,287 --> 00:17:19,487
+00:17:11,487 --> 00:17:19,687
 Elektron dan hole yang tercipta saat menyerap cahaya terkurung di dalam butir, seperti partikel dalam kotak tiga dimensi.
 
 133
-00:17:19,487 --> 00:17:29,167
+00:17:19,687 --> 00:17:29,367
 Energi cahaya yang dipancarkan sama dengan celah pita bahan, ditambah energi pengurungan yang sebanding dengan satu per L kuadrat.
 
 134
-00:17:29,167 --> 00:17:37,247
+00:17:29,367 --> 00:17:37,447
 Butir kecil, pengurungan kuat, cahaya biru. Butir besar, pengurungan lemah, cahaya merah.
 
 135
-00:17:37,247 --> 00:17:43,687
+00:17:37,447 --> 00:17:43,887
 Dengan mengatur waktu pertumbuhan kristal, pabrik dapat memilih warna dengan sangat presisi.
 
 136
-00:17:43,687 --> 00:17:52,767
+00:17:43,887 --> 00:17:52,967
 Di layar televisi QLED, lapisan titik kuantum mengubah cahaya LED biru menjadi merah dan hijau yang sangat murni.
 
 137
-00:17:52,767 --> 00:18:00,487
+00:17:52,967 --> 00:18:00,687
 Kini banyak produsen memakai titik kuantum indium fosfida yang bebas kadmium, karena kadmium beracun.
 
 138
-00:18:00,487 --> 00:18:11,607
+00:18:00,687 --> 00:18:11,807
 Penemuan dan sintesis titik kuantum diganjar Hadiah Nobel Kimia tahun dua ribu dua puluh tiga, untuk Alexei Ekimov, Louis Brus, dan Moungi Bawendi.
 
 139
-00:18:14,000 --> 00:18:18,840
+00:18:14,200 --> 00:18:19,040
 Penerowongan juga memungkinkan kita melihat atom satu per satu.
 
 140
-00:18:18,840 --> 00:18:29,360
+00:18:19,040 --> 00:18:29,560
 Pada mikroskop penerowongan, atau STM, ujung jarum logam yang sangat runcing didekatkan ke permukaan hingga celahnya kurang dari satu nanometer.
 
 141
-00:18:29,360 --> 00:18:38,120
+00:18:29,560 --> 00:18:38,320
 Celah vakum itu adalah penghalang. Dengan tegangan kecil, elektron menerowong dan menghasilkan arus yang sangat lemah.
 
 142
-00:18:38,120 --> 00:18:47,640
+00:18:38,320 --> 00:18:47,840
 Karena peluang tembus meluruh secara eksponensial, arus berubah sekitar sepuluh kali untuk setiap perubahan jarak nol koma satu nanometer.
 
 143
-00:18:47,640 --> 00:18:57,040
+00:18:47,840 --> 00:18:57,240
 Sistem umpan balik menjaga arus tetap dengan menaikkan atau menurunkan jarum, dan gerakan jarum itu memetakan atom demi atom.
 
 144
-00:18:57,040 --> 00:19:06,880
+00:18:57,240 --> 00:19:07,080
 Penemunya, Gerd Binnig dan Heinrich Rohrer dari IBM Zürich, menerima Hadiah Nobel Fisika tahun seribu sembilan ratus delapan puluh enam.
 
 145
-00:19:06,880 --> 00:19:15,800
+00:19:07,080 --> 00:19:16,000
 Pada tahun sembilan puluh tiga, peneliti IBM menyusun empat puluh delapan atom besi menjadi cincin di atas permukaan tembaga.
 
 146
-00:19:15,800 --> 00:19:26,360
+00:19:16,000 --> 00:19:26,560
 Di dalam pagar kuantum itu, elektron permukaan membentuk gelombang berdiri, persis seperti partikel di dalam kotak, hanya saja kotaknya melingkar.
 
 147
-00:19:28,767 --> 00:19:34,727
+00:19:28,967 --> 00:19:34,927
 Di saku kita pun ada penerowongan: di dalam memori flash ponsel dan flashdisk.
 
 148
-00:19:34,727 --> 00:19:43,167
+00:19:34,927 --> 00:19:43,367
 Setiap sel memori adalah transistor dengan gerbang mengambang: sepotong silikon yang dikelilingi lapisan oksida tipis.
 
 149
-00:19:43,167 --> 00:19:52,687
+00:19:43,367 --> 00:19:52,887
 Oksida itu adalah penghalang. Dalam keadaan biasa, elektron di dalam gerbang tidak bisa keluar, bahkan selama bertahun-tahun.
 
 150
-00:19:52,687 --> 00:20:01,607
+00:19:52,887 --> 00:20:01,807
 Untuk menulis data, diberikan tegangan tinggi, sekitar dua puluh volt, yang memiringkan penghalang sehingga menjadi lebih tipis.
 
 151
-00:20:01,607 --> 00:20:09,207
+00:20:01,807 --> 00:20:09,407
 Elektron pun menerowong masuk ke gerbang mengambang. Proses ini disebut penerowongan Fowler-Nordheim.
 
 152
-00:20:09,207 --> 00:20:16,447
+00:20:09,407 --> 00:20:16,647
 Ada elektron yang terperangkap berarti satu nilai bit, tidak ada elektron berarti nilai lainnya.
 
 153
-00:20:16,447 --> 00:20:22,327
+00:20:16,647 --> 00:20:22,527
 Untuk menghapus, tegangannya dibalik, dan elektron menerowong keluar lagi.
 
 154
-00:20:22,327 --> 00:20:34,727
+00:20:22,527 --> 00:20:34,927
 Oksida itu harus cukup tipis untuk ditembus saat menulis, tetapi cukup tebal untuk menahan saat menyimpan, sehingga tebalnya hanya beberapa nanometer dan diatur sangat teliti.
 
 155
-00:20:37,133 --> 00:20:40,053
+00:20:37,333 --> 00:20:40,253
 Mari kita rangkai seluruh perjalanannya.
 
 156
-00:20:40,053 --> 00:20:45,813
+00:20:40,253 --> 00:20:46,013
 Partikel bebas boleh memiliki energi berapa saja; spektrumnya kontinu.
 
 157
-00:20:45,813 --> 00:20:55,013
+00:20:46,013 --> 00:20:55,213
 Dinding memaksakan syarat batas, dan syarat batas melahirkan kuantisasi: E n sebanding dengan n kuadrat per L kuadrat.
 
 158
-00:20:55,013 --> 00:21:03,413
+00:20:55,213 --> 00:21:03,613
 Partikel yang terkurung tak pernah diam, memiliki simpul, dan pada dua atau tiga dimensi memiliki degenerasi.
 
 159
-00:21:03,413 --> 00:21:09,653
+00:21:03,613 --> 00:21:09,853
 Dinding berhingga memberi ekor, dan ekor yang menembus dinding tipis adalah penerowongan.
 
 160
-00:21:09,653 --> 00:21:17,253
+00:21:09,853 --> 00:21:17,453
 Dalam kimia, kotak ini menjelaskan serapan elektron pi, warna pewarna, dan reaksi transfer hidrogen.
 
 161
-00:21:17,253 --> 00:21:25,813
+00:21:17,453 --> 00:21:26,013
 Dalam industri, ia menjadi titik kuantum di layar, mikroskop yang melihat atom, dan memori di saku kita.
 
 162
-00:21:25,813 --> 00:21:29,633
+00:21:26,013 --> 00:21:29,833
 Jadi, lain kali kamu melihat layar yang berwarna cerah,
 
 163
-00:21:29,633 --> 00:21:36,353
+00:21:29,833 --> 00:21:36,553
 ingatlah bahwa warnanya ditentukan oleh seberapa besar kotak tempat sebuah elektron dikurung.

@@ -154,7 +154,7 @@ Bila rantainya cukup panjang, serapannya masuk ke cahaya tampak, dan molekulnya 
 Contoh klasiknya pewarna sianin: dua atom nitrogen yang dihubungkan rantai karbon terkonjugasi.
 Pada akhir tahun empat puluhan, Hans Kuhn memodelkan elektron pi pewarna ini sebagai elektron bebas di dalam kotak.
 Setiap tambahan satu gugus CH sama dengan CH memperpanjang kotak, dan puncak serapan bergeser sekitar seratus nanometer ke arah merah.
-Dari sekitar lima ratus dua puluh lima, ke enam ratus lima, lalu tujuh ratus lima nanometer.
+Dari sekitar lima ratus dua puluh empat, ke enam ratus empat belas, lalu tujuh ratus tujuh nanometer.
 Warna larutannya ikut berubah, dari magenta, ke biru, hingga biru kehijauan, karena mata melihat warna komplementer dari yang diserap.
 Di alam pun begitu: beta-karoten pada wortel punya sebelas ikatan rangkap terkonjugasi, menyerap cahaya biru sekitar empat ratus lima puluh nanometer, sehingga tampak jingga.
 Namun untuk rantai sepanjang itu, model kotak polos meramalkan celah yang terlalu kecil, karena ikatan tunggal dan rangkap tidak sama panjang.
@@ -164,7 +164,7 @@ Jadi model kotak menangkap trennya dengan sangat baik, tetapi angka yang presisi
 
 Penerowongan bukan sekadar keanehan teori. Ia terjadi di dalam molekul yang kita kenal.
 Molekul amonia berbentuk piramida, dan atom nitrogennya bisa membalik ke sisi seberang, seperti payung yang tertiup angin.
-Di antara kedua bentuk itu ada penghalang energi sekitar dua puluh lima kilojoule per mol.
+Di antara kedua bentuk itu ada penghalang energi sekitar dua puluh empat kilojoule per mol.
 Molekul itu tidak melompati penghalang; ia menerowong, bolak-balik sekitar dua puluh empat miliar kali per detik.
 Frekuensi sekitar dua puluh empat gigahertz ini dipakai pada jam atom pertama dan maser amonia.
 Ganti hidrogen dengan deuterium, dan pembalikannya melambat sekitar lima belas kali, karena massanya lebih besar.
@@ -172,7 +172,7 @@ Hal serupa terjadi pada reaksi transfer hidrogen di dalam enzim.
 Pada enzim lipoksigenase dari kedelai, mengganti hidrogen dengan deuterium memperlambat reaksi sekitar delapan puluh kali, padahal teori klasik memperkirakan paling banyak sekitar tujuh kali.
 Selisih besar itu adalah sidik jari penerowongan: atom hidrogen menembus penghalang, bukan melompatinya.
 
-[16:58] Bab 14 — Titik kuantum
+[16:59] Bab 14 — Titik kuantum
 
 Kembali ke botol-botol berpendar di awal video.
 Butiran kadmium selenida itu adalah titik kuantum: kristal semikonduktor berukuran beberapa nanometer.
