@@ -86,8 +86,8 @@ export const Zero: React.FC = () => {
           </Label>
           <g opacity={avg}>
             <line x1={MP.cx} y1={MP.y + 10} x2={MP.cx} y2={MP.y - MP.h - 15} stroke={C.ink} strokeWidth={2} strokeDasharray="6 6" />
-            <Label x={MP.cx} y={MP.y + 34} size={28} color={C.ink} font="serif" italic>
-              ⟨p⟩ = 0
+            <Label x={MP.cx} y={MP.y + 34} size={26} color={C.ink}>
+              rata-rata p = 0
             </Label>
             <Label x={MP.cx - 260} y={MP.y - 60} size={26} color={C.muted} opacity={1 - narrow}>
               ← ke kiri
@@ -99,8 +99,8 @@ export const Zero: React.FC = () => {
           <g opacity={sq}>
             <line x1={px(0)} y1={MP.y - MP.h * 0.42} x2={px(ar(-Math.PI) / sx / rel)} y2={MP.y - MP.h * 0.42} stroke={C.gold} strokeWidth={3} markerEnd="url(#arrow-gold)" />
             <line x1={px(0)} y1={MP.y - MP.h * 0.42} x2={px(ar(Math.PI) / sx / rel)} y2={MP.y - MP.h * 0.42} stroke={C.gold} strokeWidth={3} markerEnd="url(#arrow-gold)" />
-            <Label x={MP.cx} y={MP.y - MP.h * 0.42 - 26} size={30} color={C.gold} weight={700} font="serif" italic>
-              ⟨p²⟩ ≠ 0
+            <Label x={MP.cx} y={MP.y - MP.h * 0.42 - 26} size={26} color={C.gold} weight={700}>
+              rata-rata p² ≠ 0
             </Label>
           </g>
         </g>

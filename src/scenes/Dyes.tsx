@@ -8,8 +8,8 @@ import {C} from '../theme';
 
 // Pewarna sianin simetris (skematis: jalur konjugasi N…N) dan β-karoten.
 const DYES = [
-  {m: 1, nm: 523, name: 'sianin', sol: '#d8357f', y: 300},
-  {m: 3, nm: 604, name: 'karbosianin', sol: '#3d55e8', y: 470},
+  {m: 1, nm: 524, name: 'sianin', sol: '#d8357f', y: 300},
+  {m: 3, nm: 614, name: 'karbosianin', sol: '#3d55e8', y: 470},
   {m: 5, nm: 707, name: 'dikarbosianin', sol: '#1fa7b5', y: 640},
 ];
 const SP = {x0: 1010, x1: 1770, y: 560, h: 220, l0: 400, l1: 800};
@@ -87,7 +87,7 @@ export const Dyes: React.FC = () => {
               </Label>
             ))}
             <Label x={(SP.x0 + SP.x1) / 2} y={SP.y - SP.h - 30} size={24} color={C.ink} weight={600}>
-              serapan (nm, ukur dalam metanol, kira-kira)
+              λmaks terukur (etanol, katalog Sigma-Aldrich)
             </Label>
             {DYES.map((d, i) => (
               <g key={i} opacity={pk[i]}>

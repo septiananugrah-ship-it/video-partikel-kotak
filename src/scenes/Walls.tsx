@@ -32,7 +32,7 @@ export const Walls: React.FC = () => {
   const fit = Math.abs(Math.sin(kL)) < 0.09;
   const stack = ramp(t, cue(7), cue(7) + 0.8) * (1 - 0.7 * ramp(t, cue(8), cue(8) + 0.5));
   const zero = ramp(t, cue(8) + 0.2, cue(8) + 0.9);
-  const vib = (n: number) => 0.55 + 0.45 * Math.cos(t * 3 * n);
+  const vib = (n: number) => 0.78 + 0.22 * Math.cos(t * 3 * n);
   const vplot = win(t, cue(1) - 0.2, cue(4) - 0.3, 0.7, 0.5);
 
   return (
@@ -142,10 +142,10 @@ export const Walls: React.FC = () => {
               <g key={n} opacity={p}>
                 <line x1={B.x0} y1={y} x2={B.x1} y2={y} stroke={C.faint} strokeWidth={1.5} />
                 <path d={curve((u) => Math.sin(n * Math.PI * u) * vib(n), y, 58)} fill="none" stroke={ncol(n)} strokeWidth={5} />
-                <Label x={B.x1 + 140} y={y} size={28} color={ncol(n)} anchor="start" font="serif" italic>
+                <Label x={B.x1 + 140} y={y} size={32} color={ncol(n)} anchor="start" font="serif" italic weight={700}>
                   n = {n}
                 </Label>
-                <Label x={B.x1 + 250} y={y} size={24} color={C.muted} anchor="start">
+                <Label x={B.x1 + 260} y={y} size={26} color={C.ink} anchor="start">
                   {n === 1 ? '½ gelombang' : `${n} × ½ gelombang`}
                 </Label>
               </g>

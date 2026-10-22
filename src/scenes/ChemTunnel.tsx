@@ -71,7 +71,7 @@ export const ChemTunnel: React.FC = () => {
             <path d={dwPath} fill="none" stroke={C.ink} strokeWidth={4} />
             <line x1={dwX(0)} y1={DW.bot - 62} x2={dwX(0)} y2={dwY(0) + 8} stroke={C.red} strokeWidth={3} markerEnd="url(#arrow-red)" />
             <Label x={dwX(0)} y={dwY(0) - 30} size={24} color={C.red}>
-              penghalang ≈ 25 kJ/mol
+              penghalang ≈ 24 kJ/mol (2020 cm⁻¹)
             </Label>
             {[-1, 1].map((q) => (
               <Label key={q} x={dwX(q)} y={DW.bot + 34} size={22} color={C.muted}>
@@ -80,7 +80,7 @@ export const ChemTunnel: React.FC = () => {
             ))}
             <line x1={dwX(-1.45)} y1={DW.bot - 46} x2={dwX(1.45)} y2={DW.bot - 46} stroke={C.gold} strokeWidth={3} />
             <line x1={dwX(-1.45)} y1={DW.bot - 56} x2={dwX(1.45)} y2={DW.bot - 56} stroke={C.gold} strokeWidth={3} />
-            <Label x={DW.x0 - 14} y={DW.bot - 51} size={20} color={C.gold} anchor="end">
+            <Label x={DW.x0 - 14} y={DW.bot - 51} size={20} color={C.gold} anchor="end" opacity={1 - nd3}>
               dua tingkat, terpisah tipis
             </Label>
           </g>

@@ -301,7 +301,7 @@ export const SCRIPT: SceneScript[] = [
       {text: 'Contoh klasiknya pewarna sianin: dua atom nitrogen yang dihubungkan rantai karbon terkonjugasi.', hl: ['pewarna sianin'], pause: 0.6},
       {text: 'Pada akhir tahun empat puluhan, Hans Kuhn memodelkan elektron pi pewarna ini sebagai elektron bebas di dalam kotak.', hl: ['Hans Kuhn'], pause: 0.8},
       {text: 'Setiap tambahan satu gugus CH sama dengan CH memperpanjang kotak, dan puncak serapan bergeser sekitar seratus nanometer ke arah merah.', hl: ['seratus nanometer'], pause: 0.6},
-      {text: 'Dari sekitar lima ratus dua puluh lima, ke enam ratus lima, lalu tujuh ratus lima nanometer.', pause: 0.6},
+      {text: 'Dari sekitar lima ratus dua puluh empat, ke enam ratus empat belas, lalu tujuh ratus tujuh nanometer.', pause: 0.6},
       {text: 'Warna larutannya ikut berubah, dari magenta, ke biru, hingga biru kehijauan, karena mata melihat warna komplementer dari yang diserap.', hl: ['warna komplementer'], pause: 0.8},
       {text: 'Di alam pun begitu: beta-karoten pada wortel punya sebelas ikatan rangkap terkonjugasi, menyerap cahaya biru sekitar empat ratus lima puluh nanometer, sehingga tampak jingga.', hl: ['beta-karoten'], pause: 0.8},
       {text: 'Namun untuk rantai sepanjang itu, model kotak polos meramalkan celah yang terlalu kecil, karena ikatan tunggal dan rangkap tidak sama panjang.', hl: ['terlalu kecil'], pause: 0.6},
@@ -319,7 +319,7 @@ export const SCRIPT: SceneScript[] = [
     lines: [
       {text: 'Penerowongan bukan sekadar keanehan teori. Ia terjadi di dalam molekul yang kita kenal.', pause: 0.6},
       {text: 'Molekul amonia berbentuk piramida, dan atom nitrogennya bisa membalik ke sisi seberang, seperti payung yang tertiup angin.', hl: ['membalik'], pause: 0.6},
-      {text: 'Di antara kedua bentuk itu ada penghalang energi sekitar dua puluh lima kilojoule per mol.', pause: 0.6},
+      {text: 'Di antara kedua bentuk itu ada penghalang energi sekitar dua puluh empat kilojoule per mol.', pause: 0.6},
       {text: 'Molekul itu tidak melompati penghalang; ia menerowong, bolak-balik sekitar dua puluh empat miliar kali per detik.', hl: ['menerowong'], pause: 0.8},
       {text: 'Frekuensi sekitar dua puluh empat gigahertz ini dipakai pada jam atom pertama dan maser amonia.', hl: ['maser amonia'], pause: 0.6},
       {text: 'Ganti hidrogen dengan deuterium, dan pembalikannya melambat sekitar lima belas kali, karena massanya lebih besar.', hl: ['lima belas kali'], pause: 0.8},

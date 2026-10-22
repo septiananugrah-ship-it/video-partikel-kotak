@@ -3,6 +3,7 @@ import {AbsoluteFill} from 'remotion';
 import {BACK, EASE_IN_OUT, mix, ramp, win} from '../anim';
 import {Formula, Frac, Label, Stage, Sub, Sup, V} from '../components/primitives';
 import {Electron} from '../components/viz';
+import {PacketSim} from '../components/PacketSim';
 import {useScene} from '../SceneContext';
 import {C} from '../theme';
 
@@ -67,6 +68,9 @@ const inY = (T: number) => IN.y + IN.h * (-Math.log10(T) / 9);
 
 export const Tunnel: React.FC = () => {
   const {t, cue, wordOf} = useScene();
+  const sim = win(t, cue(2) - 0.3, cue(4) - 0.5, 0.8, 0.6);
+  const simP = ramp(t, cue(2) + 0.4, cue(4) - 0.9, (x) => x);
+  const base = 1 - sim;
   const rise = ramp(t, cue(0), cue(0) + 1.2, BACK);
   const eLbl = ramp(t, wordOf(0, 'satu') - 0.2, wordOf(0, 'satu') + 0.5);
   const dot = win(t, cue(0) + 0.3, cue(1) - 0.2, 0.5, 0.4);
@@ -107,6 +111,7 @@ export const Tunnel: React.FC = () => {
   return (
     <AbsoluteFill>
       <Stage>
+        <g opacity={base}>
         {/* potensial */}
         <g opacity={ramp(t, -0.2, 0.6)}>
           <line x1={XL} y1={Y0} x2={XR} y2={Y0} stroke={C.muted} strokeWidth={2} />
@@ -207,6 +212,8 @@ export const Tunnel: React.FC = () => {
             T ≈ 10⁻⁷⁶
           </Label>
         </g>
+        </g>
+        <PacketSim p={simP} x={150} y={700} w={1620} h={400} opacity={sim} />
       </Stage>
       <Formula x={1450} y={215} p={win(t, cue(4), cue(7) - 0.1, 0.7, 0.4) * ramp(t, cue(4), cue(4) + 0.7, BACK)} accent={C.gold} caption="koefisien transmisi eksak (E < V₀)">
         <V color={C.gold}>T</V>&nbsp;=&nbsp;

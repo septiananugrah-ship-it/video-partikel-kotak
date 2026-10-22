@@ -11,12 +11,12 @@ const REFS = [
   'P. Atkins & J. de Paula, Physical Chemistry · I. N. Levine, Quantum Chemistry · D. A. McQuarrie, Quantum Chemistry',
   'CODATA 2018 (NIST): h, ħ, mₑ, c, e',
   'H. Kuhn, J. Chem. Phys. 17, 1198 (1949) — model elektron bebas untuk pewarna',
-  'NIST Chemistry WebBook — spektrum UV 1,3-butadiena',
+  'NIST Chemistry WebBook — spektrum UV 1,3-butadiena · katalog Sigma-Aldrich: λmaks pewarna sianin (etanol)',
   'C. B. Murray, D. J. Norris & M. G. Bawendi, J. Am. Chem. Soc. 115, 8706 (1993)',
   'The Nobel Prize in Chemistry 2023 — quantum dots (nobelprize.org)',
   'G. Binnig & H. Rohrer, Rev. Mod. Phys. 59, 615 (1987) — mikroskop penerowongan',
   'M. F. Crommie, C. P. Lutz & D. M. Eigler, Science 262, 218 (1993) — pagar kuantum',
-  'J. P. Gordon, H. J. Zeiger & C. H. Townes, Phys. Rev. 95, 282 (1954) — maser amonia',
+  'J. P. Gordon, H. J. Zeiger & C. H. Townes, Phys. Rev. 95, 282 (1954) — maser amonia; penghalang inversi NH₃ ≈ 2020 cm⁻¹',
   'M. J. Knapp, K. Rickert & J. P. Klinman, J. Am. Chem. Soc. 124, 3865 (2002) — KIE lipoksigenase',
   'S. M. Sze & K. K. Ng, Physics of Semiconductor Devices — memori flash & Fowler–Nordheim',
 ];
@@ -56,7 +56,7 @@ export const Outro: React.FC = () => {
             ))}
           </div>
           <div style={{marginTop: 22, fontFamily: FONT.sans, fontSize: 20, color: C.faint}}>
-            Angka model dihitung dari rumus Modul 3 · nilai ukur ditandai “≈” · ilustrasi alat &amp; molekul bersifat skematis
+            Angka model dihitung dari rumus Modul 3 · simulasi paket gelombang: persamaan Schrödinger bergantung waktu (split-operator) · nilai ukur ditandai “≈” · ilustrasi alat &amp; molekul skematis
           </div>
         </div>
       </AbsoluteFill>
