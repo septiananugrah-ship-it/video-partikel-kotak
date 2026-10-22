@@ -3,6 +3,7 @@ import {AbsoluteFill} from 'remotion';
 import {BACK, EASE_IN_OUT, mix, rand, ramp, win} from '../anim';
 import {Label, Stage} from '../components/primitives';
 import {Electron} from '../components/viz';
+import {ScaleHud, ZoomGrid, zoomLayer} from '../components/Zoom';
 import {useScene} from '../SceneContext';
 import {C} from '../theme';
 
@@ -14,17 +15,84 @@ const GX0 = 380;
 const GX1 = 820;
 const BD = {x0: 1300, x1: 1800, ch: 1420, ox1: 1570, base: 620, top: 360, drop: 200};
 const NE = 9;
+const ZC = {x: 960, y: 500};
+const HUD = {exps: [-1, -2, -6, -7], names: ['PONSEL', 'CHIP MEMORI NAND', 'SUSUNAN SEL', 'SATU SEL'], colors: [C.cyan, C.gold, C.mint, C.violet]};
+
+const Layer: React.FC<{level: number; i: number; children: React.ReactNode}> = ({level, i, children}) => {
+  const {scale, op} = zoomLayer(level, i, 8);
+  if (op <= 0) return null;
+  return (
+    <g opacity={op} transform={`translate(${ZC.x} ${ZC.y}) scale(${scale}) translate(${-ZC.x} ${-ZC.y})`}>
+      {children}
+    </g>
+  );
+};
+
+const ZoomStack: React.FC<{level: number; t: number}> = ({level, t}) => (
+  <g>
+    {/* 0 · ponsel (tembus pandang: papan & chip di titik fokus) */}
+    <Layer level={level} i={0}>
+      <rect x={ZC.x - 170} y={ZC.y - 330} width={340} height={660} rx={46} fill="#0d1328" stroke="#8ea0c8" strokeWidth={6} />
+      <rect x={ZC.x - 150} y={ZC.y - 300} width={300} height={600} rx={30} fill="#16204a" opacity={0.6} />
+      <rect x={ZC.x - 110} y={ZC.y - 120} width={220} height={260} rx={12} fill="#1b5e3a" opacity={0.75} />
+      {Array.from({length: 7}, (_, k) => (
+        <line key={k} x1={ZC.x - 100} y1={ZC.y - 100 + k * 34} x2={ZC.x + 100} y2={ZC.y - 100 + k * 34} stroke={C.gold} strokeWidth={2} opacity={0.35} />
+      ))}
+      <rect x={ZC.x - 34} y={ZC.y - 34} width={68} height={68} rx={6} fill="#1a1d26" stroke={C.gold} strokeWidth={3} />
+      <circle cx={ZC.x} cy={ZC.y - 285} r={8} fill="#3a4466" />
+    </Layer>
+    {/* 1 · chip NAND */}
+    <Layer level={level} i={1}>
+      <rect x={ZC.x - 300} y={ZC.y - 300} width={600} height={600} rx={24} fill="#1a1d26" stroke={C.gold} strokeWidth={6} />
+      <rect x={ZC.x - 200} y={ZC.y - 200} width={400} height={400} rx={8} fill="#2a2f45" stroke="#8ea0c8" strokeWidth={3} />
+      {Array.from({length: 16}, (_, k) => (
+        <rect key={k} x={ZC.x - 190 + (k % 4) * 96} y={ZC.y - 190 + Math.floor(k / 4) * 96} width={84} height={84} fill="#3b4a7a" opacity={0.55 + 0.25 * Math.sin(t * 2 + k)} />
+      ))}
+      <text x={ZC.x} y={ZC.y + 260} textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontSize={28} fill={C.gold}>
+        NAND FLASH
+      </text>
+    </Layer>
+    {/* 2 · susunan sel memori */}
+    <Layer level={level} i={2}>
+      {Array.from({length: 11}, (_, r) =>
+        Array.from({length: 15}, (_, c) => {
+          const x = ZC.x - 420 + c * 60;
+          const y = ZC.y - 300 + r * 60;
+          const on = ((r * 7 + c * 3) % 5) < 2;
+          return (
+            <g key={`${r}-${c}`}>
+              <rect x={x - 18} y={y - 14} width={36} height={28} rx={4} fill={on ? C.gold : '#3b4a7a'} opacity={on ? 0.85 : 0.6} />
+              {on ? <circle cx={x} cy={y} r={4} fill={C.cyan} /> : null}
+            </g>
+          );
+        }),
+      )}
+      {Array.from({length: 15}, (_, c) => (
+        <line key={c} x1={ZC.x - 420 + c * 60} y1={ZC.y - 330} x2={ZC.x - 420 + c * 60} y2={ZC.y + 330} stroke="#8ea0c8" strokeWidth={1.5} opacity={0.3} />
+      ))}
+    </Layer>
+    {/* 3 · satu sel (siluet) */}
+    <Layer level={level} i={3}>
+      <rect x={ZC.x - 240} y={ZC.y + 60} width={480} height={160} fill="#3a4a6a" opacity={0.6} />
+      <rect x={ZC.x - 130} y={ZC.y - 40} width={260} height={50} rx={6} fill={C.gold} opacity={0.4} stroke={C.gold} strokeWidth={3} />
+      <rect x={ZC.x - 130} y={ZC.y - 120} width={260} height={60} rx={6} fill="#8ea0c8" opacity={0.85} />
+    </Layer>
+  </g>
+);
 const fgPos = (k: number, t: number): [number, number] => [GX0 + 40 + ((k + 0.5) / NE) * (GX1 - GX0 - 80) + 6 * Math.sin(t * 3 + k), (L.fg[0] + L.fg[1]) / 2 + 12 * Math.sin(t * 2.3 + k * 1.7)];
 
 export const Flash: React.FC = () => {
   const {t, cue, wordOf} = useScene();
-  const cell = ramp(t, cue(0) + 0.2, cue(0) + 1.2, BACK);
+  // zoom-through ala SCIENTIAN: ponsel → chip NAND → susunan sel → satu sel
+  const zl = 3.25 * ramp(t, cue(0) + 0.3, cue(1) + 0.4, EASE_IN_OUT);
+  const zoomOn = 1 - ramp(t, cue(1) + 0.1, cue(1) + 0.7);
+  const cell = ramp(t, cue(1) + 0.1, cue(1) + 0.9, BACK);
   const names = ramp(t, cue(1) + 0.3, cue(1) + 1.2);
   const held = win(t, cue(2), cue(3) + 0.3, 0.6, 0.5);
   const volt = win(t, cue(3), cue(5) - 0.2, 0.6, 0.4);
   const tilt = ramp(t, wordOf(3, 'memiringkan') - 0.3, wordOf(3, 'memiringkan') + 1.2, EASE_IN_OUT) * (1 - ramp(t, cue(6) - 0.3, cue(6) + 0.3));
   const fill = ramp(t, cue(4), cue(4) + 3, EASE_IN_OUT);
-  const bit = ramp(t, cue(5), cue(5) + 0.7);
+  const bit = ramp(t, cue(5), cue(5) + 0.7) * (1 - ramp(t, cue(6) - 0.3, cue(6) + 0.2));
   const erase = ramp(t, cue(6) + 0.3, cue(7) - 0.3, EASE_IN_OUT);
   const ev = win(t, cue(6), cue(7) + 0.2, 0.5, 0.5);
   const thick = ramp(t, cue(7), cue(7) + 0.8);
@@ -42,6 +110,10 @@ export const Flash: React.FC = () => {
   return (
     <AbsoluteFill>
       <Stage>
+        <g opacity={zoomOn}>
+          <ZoomGrid k={Math.pow(8, zl)} alpha={0.9} />
+          <ZoomStack level={zl} t={t} />
+        </g>
         <g opacity={cell} transform="translate(600 590) scale(1.22) translate(-600 -640)">
           {/* substrat & sumber/cerat */}
           <rect x={X0} y={L.sub[0]} width={X1 - X0} height={L.sub[1] - L.sub[0]} fill="#3a4a6a" opacity={0.6} />
@@ -146,6 +218,7 @@ export const Flash: React.FC = () => {
           </g>
         </g>
       </Stage>
+      <ScaleHud level={zl} exps={HUD.exps} names={HUD.names} colors={HUD.colors} alpha={zoomOn * ramp(t, cue(0), cue(0) + 0.6)} />
     </AbsoluteFill>
   );
 };

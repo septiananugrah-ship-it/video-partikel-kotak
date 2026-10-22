@@ -10,25 +10,25 @@ const XL = 140;
 const XR = 1780;
 const SPAN = 3.2;
 const px = (x: number) => mix(XL, XR, (x + SPAN) / (2 * SPAN));
-const Y0 = 840;
-const YV = 300;
+const Y0 = 860;
+const YV = 330;
 const yE = (e: number) => mix(Y0, YV, e); // e = E/V₀
 const Z0 = 2;
 const ST = [
   {z: 1.02987, e: 0.26516, odd: false, col: C.gold},
   {z: 1.89549, e: 0.89822, odd: true, col: C.cyan},
 ].map((s) => ({...s, kap: Math.sqrt(Z0 * Z0 - s.z * s.z)}));
-const AMP = 40;
+const AMP = [78, 46];
 
 const psiF = (s: (typeof ST)[number], x: number) => {
   if (Math.abs(x) <= 1) return s.odd ? Math.sin(s.z * x) : Math.cos(s.z * x);
   const edge = s.odd ? Math.sin(s.z) : Math.cos(s.z);
   return (s.odd ? Math.sign(x) : 1) * edge * Math.exp(-s.kap * (Math.abs(x) - 1));
 };
-const path = (f: (x: number) => number, x0: number, x1: number, y: number) =>
+const path = (f: (x: number) => number, x0: number, x1: number, y: number, amp = AMP[0]) =>
   Array.from({length: 241}, (_, i) => {
     const x = x0 + ((x1 - x0) * i) / 240;
-    return `${i ? 'L' : 'M'}${px(x).toFixed(1)},${(y - AMP * f(x)).toFixed(1)}`;
+    return `${i ? 'L' : 'M'}${px(x).toFixed(1)},${(y - amp * f(x)).toFixed(1)}`;
   }).join(' ');
 
 export const Finite: React.FC = () => {
@@ -91,16 +91,26 @@ export const Finite: React.FC = () => {
           return (
             <g key={i} opacity={show}>
               <line x1={XL} y1={y} x2={XR} y2={y} stroke={s.col} strokeWidth={1.5} strokeDasharray="6 8" opacity={0.5} />
-              <DrawPath d={path(moving, -1, 1, y)} p={inner} stroke={s.col} width={5} len={3000} />
+              <DrawPath d={path(moving, -1, 1, y, AMP[i])} p={inner} stroke={s.col} width={5} len={3000} />
+              {tails > 0 && i === 0 ? (
+                <g opacity={forb}>
+                  {[
+                    [-reach, -1],
+                    [1, reach],
+                  ].map(([a, b], k) => (
+                    <path key={k} d={`${path(moving, a, b, y, AMP[i])} L${px(b)},${y} L${px(a)},${y} Z`} fill={C.red} opacity={0.35} />
+                  ))}
+                </g>
+              ) : null}
               {tails > 0 ? (
                 <>
-                  <path d={path(moving, -reach, -1, y)} fill="none" stroke={s.col} strokeWidth={5} />
-                  <path d={path(moving, 1, extended ? xb : reach, y)} fill="none" stroke={s.col} strokeWidth={5} />
+                  <path d={path(moving, -reach, -1, y, AMP[i])} fill="none" stroke={s.col} strokeWidth={5} />
+                  <path d={path(moving, 1, extended ? xb : reach, y, AMP[i])} fill="none" stroke={s.col} strokeWidth={5} />
                 </>
               ) : null}
               {extended ? (
                 <path
-                  d={path((x) => psiF(s, xb) * Math.cos(1.9 * (x - xb) * 3 - ph), xb, SPAN, y)}
+                  d={path((x) => psiF(s, xb) * Math.cos(1.9 * (x - xb) * 3 - ph), xb, SPAN, y, AMP[i])}
                   fill="none"
                   stroke={C.mint}
                   strokeWidth={5}

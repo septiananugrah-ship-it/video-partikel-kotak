@@ -466,7 +466,7 @@ export const Formula: React.FC<{
 }> = ({x, y, p, children, accent = C.gold, size = 58, anchor = 'center', caption}) =>
   p <= 0.001 ? null : (
     <Card x={x} y={y} opacity={Math.min(1, p * 1.4)} scale={0.9 + 0.1 * p} accent={accent} anchor={anchor} style={{padding: '22px 38px'}}>
-      <div style={{fontSize: size, lineHeight: 1.25, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 0, fontFamily: FONT.serif}}>{children}</div>
+      <div style={{fontSize: size, lineHeight: 1.25, textAlign: 'center', fontFamily: FONT.serif, whiteSpace: 'nowrap'}}>{children}</div>
       {caption ? <div style={{fontSize: 26, color: C.muted, textAlign: 'center', marginTop: 10, fontFamily: FONT.sans}}>{caption}</div> : null}
     </Card>
   );

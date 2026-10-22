@@ -3,6 +3,7 @@ import {AbsoluteFill} from 'remotion';
 import {BACK, EASE_IN_OUT, mix, ramp, win} from '../anim';
 import {Formula, Frac, Label, Stage, Sub, Sup, V} from '../components/primitives';
 import {E1_EV, Electron, Heatmap2D, id} from '../components/viz';
+import {Mesh3D} from '../components/Surface3D';
 import {useScene} from '../SceneContext';
 import {C} from '../theme';
 
@@ -21,6 +22,9 @@ export const Box2D: React.FC = () => {
   const box = ramp(t, cue(0), cue(0) + 0.8);
   const ball = win(t, cue(0) + 0.4, cue(1) + 0.6, 0.6, 0.6);
   const big = win(t, cue(1) + 0.3, cue(3) - 0.2, 0.8, 0.5);
+  const m11 = win(t, cue(1) + 0.3, cue(2) + 0.2, 0.8, 0.6);
+  const m21 = win(t, cue(2), cue(3) - 0.2, 0.8, 0.5);
+  const drum = Math.cos(t * 2.6);
   const grid = ramp(t, cue(3), cue(3) + 0.9);
   const nodes = ramp(t, cue(3) + 1.2, cue(3) + 2);
   const diag = ramp(t, cue(4) - 0.2, cue(4) + 0.8);
@@ -49,21 +53,47 @@ export const Box2D: React.FC = () => {
     <AbsoluteFill>
       <Stage>
         {/* kotak besar */}
-        <g opacity={box * (1 - grid)}>
-          <rect x={BIG.x} y={BIG.y} width={BIG.s} height={BIG.s} fill="none" stroke={C.ink} strokeWidth={5} />
+        <g opacity={box * (1 - grid) * (1 - big)}>
           <Label x={BIG.x + BIG.s / 2} y={BIG.y + BIG.s + 36} size={30} color={C.gold} font="serif" italic>
             L<tspan baselineShift="sub" fontSize={20}>x</tspan>
           </Label>
           <Label x={BIG.x - 40} y={BIG.y + BIG.s / 2} size={30} color={C.gold} font="serif" italic>
             L<tspan baselineShift="sub" fontSize={20}>y</tspan>
           </Label>
-          <Heatmap2D x={BIG.x} y={BIG.y} w={BIG.s} h={BIG.s} nx={1} ny={1} opacity={big} cells={40} />
+          <g opacity={1 - big}>
+            <rect x={BIG.x} y={BIG.y} width={BIG.s} height={BIG.s} fill="none" stroke={C.ink} strokeWidth={5} />
+          </g>
           <Electron x={bx} y={by} r={13} opacity={ball} />
           <g opacity={ball}>
             <line x1={bx} y1={by} x2={bx + 90 * Math.cos(t * 1.9)} y2={by} stroke={C.cyan} strokeWidth={3} markerEnd="url(#arrow-cyan)" />
             <line x1={bx} y1={by} x2={bx} y2={by - 90 * Math.cos(t * 1.3 + 1)} stroke={C.mint} strokeWidth={3} markerEnd="url(#arrow-mint)" />
           </g>
         </g>
+        {/* membran 3D: ψ(x, y) bergetar seperti kulit gendang */}
+        {[
+          {key: 'm11', nx: 1, ny: 1, o: m11 * (1 - grid)},
+          {key: 'm21', nx: 2, ny: 1, o: m21 * (1 - grid)},
+        ].map((m) => (
+          <g key={m.key} opacity={m.o}>
+            <Mesh3D
+              f={(u, v) => drum * Math.sin((m.nx * Math.PI * (u + 1)) / 2) * Math.sin((m.ny * Math.PI * (v + 1)) / 2)}
+              n={32}
+              cx={480}
+              cy={620}
+              size={290}
+              amp={240}
+              yaw={0.62 + 0.12 * Math.sin(t * 0.4)}
+              pitch={0.52}
+            />
+            <Heatmap2D x={1180} y={440} w={300} h={300} nx={m.nx} ny={m.ny} />
+            <Label x={1330} y={775} size={24} color={C.muted}>
+              |ψ|² dilihat dari atas
+            </Label>
+            <Label x={480} y={300} size={32} color={C.gold} font="serif" italic>
+              (n<tspan baselineShift="sub" fontSize={22}>x</tspan>, n<tspan baselineShift="sub" fontSize={22}>y</tspan>) = ({m.nx}, {m.ny})
+            </Label>
+          </g>
+        ))}
         {/* kisi empat keadaan */}
         <g opacity={grid}>
           {GRID.map((g, i) => {

@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {BACK, EASE_IN_OUT, mix, ramp} from '../anim';
 import {Label, Stage} from '../components/primitives';
+import {J0, Surface3D, heightMap} from '../components/Surface3D';
 import {useScene} from '../SceneContext';
 import {C, FONT} from '../theme';
 
@@ -17,8 +18,31 @@ const topo = (x: number) => {
   return SURF.y - best;
 };
 const GAP = 46;
-const TR = {x0: 1360, x1: 1780, y: 790, h: 110};
-const IP = {x0: 1380, x1: 1760, y0: 300, y1: 560};
+
+// Peta tinggi skematis: kisi atom heksagonal (pindaian STM) dan pagar kuantum 48 atom Fe.
+const latticeH = (u: number, v: number) => {
+  const a = 0.2;
+  const dy = (a * Math.sqrt(3)) / 2;
+  let best = 9;
+  const j0 = Math.round(v / dy);
+  for (let j = j0 - 1; j <= j0 + 1; j++) {
+    const off = (((j % 2) + 2) % 2) * (a / 2);
+    const i0 = Math.round((u - off) / a);
+    for (let i = i0 - 1; i <= i0 + 1; i++) best = Math.min(best, Math.hypot(u - (i * a + off), v - j * dy));
+  }
+  return 0.55 * Math.exp(-(best * best) / (2 * 0.045 * 0.045));
+};
+const CORRAL_R = 0.78;
+const CORRAL_K = 11.79 / CORRAL_R; // empat simpul J₀ di dalam cincin
+const FE = Array.from({length: 48}, (_, k) => [CORRAL_R * Math.cos((2 * Math.PI * k) / 48), CORRAL_R * Math.sin((2 * Math.PI * k) / 48)]);
+const corralH = (u: number, v: number) => {
+  const r = Math.hypot(u, v);
+  let fe = 0;
+  for (const [x, y] of FE) fe += Math.exp(-((u - x) ** 2 + (v - y) ** 2) / (2 * 0.028 * 0.028));
+  const inside = r < CORRAL_R ? 1 : Math.exp(-(r - CORRAL_R) * 9);
+  return 0.9 * fe + 0.32 * J0(CORRAL_K * r) ** 2 * inside + 0.04 * Math.cos(28 * r) * (1 - inside);
+};
+const IP = {x0: 1380, x1: 1760, y0: 250, y1: 500};
 
 export const STM: React.FC = () => {
   const {t, cue} = useScene();
@@ -33,13 +57,8 @@ export const STM: React.FC = () => {
   const trace = ramp(t, cue(4), cue(4) + 0.6);
   const nob = ramp(t, cue(5), cue(5) + 0.7, BACK) * (1 - ramp(t, cue(6) - 0.6, cue(6) - 0.1));
   const B = ramp(t, cue(6) - 0.2, cue(6) + 1);
-  const ring = (k: number) => ramp(t, cue(6) + 0.3 + k * 0.035, cue(6) + 0.6 + k * 0.035);
   const wave = ramp(t, cue(7), cue(7) + 1.5);
-  const sweep = scan % 880;
-  const tracePts = Array.from({length: 90}, (_, i) => {
-    const xx = 300 + (sweep * i) / 89;
-    return `${i ? 'L' : 'M'}${mix(TR.x0, TR.x1, (xx - 300) / 880).toFixed(1)},${(TR.y - (SURF.y - topo(xx)) * (TR.h / 40)).toFixed(1)}`;
-  }).join(' ');
+
 
   return (
     <AbsoluteFill>
@@ -96,46 +115,39 @@ export const STM: React.FC = () => {
               tiap +0,1 nm → arus ÷ ~10
             </Label>
           </g>
-          {/* rekaman tinggi jarum */}
+          {/* peta 3D hasil pindaian, baris demi baris */}
           <g opacity={trace}>
-            <rect x={TR.x0 - 30} y={TR.y - TR.h - 50} width={TR.x1 - TR.x0 + 60} height={TR.h + 80} rx={14} fill="rgba(10,14,30,0.85)" stroke={C.faint} strokeWidth={2} />
-            <Label x={(TR.x0 + TR.x1) / 2} y={TR.y - TR.h - 26} size={20} color={C.ink}>
-              tinggi jarum → peta atom
+            <rect x={1330} y={600} width={460} height={250} rx={14} fill="rgba(10,14,30,0.85)" stroke={C.faint} strokeWidth={2} />
+            <Label x={1560} y={626} size={20} color={C.ink}>
+              tinggi jarum → peta atom (3D)
             </Label>
-            <path d={tracePts} fill="none" stroke={C.mint} strokeWidth={3} />
+            <Surface3D map={heightMap('lat', 46, 70, latticeH)} cx={1560} cy={745} w={400} depth={150} hz={70} reveal={ramp(t, cue(4), cue(5) + 2, (x) => x)} gradId="lat-grad" colors={[C.blue, C.cyan, '#e8fbff']} />
           </g>
         </g>
-        {/* pagar kuantum */}
+        {/* pagar kuantum: permukaan 3D yang muncul baris demi baris */}
         <g opacity={B}>
-          <ellipse cx={960} cy={540} rx={600} ry={250} fill="#c97a3a" opacity={0.12} />
-          <g opacity={wave}>
-            {Array.from({length: 9}, (_, k) => {
-              const rr = (k + 0.5) / 9;
-              const amp = (1 / Math.sqrt(k + 1)) * (0.6 + 0.4 * Math.sin(t * 2 - k));
-              return <ellipse key={k} cx={960} cy={540 - 10 * amp} rx={500 * rr} ry={205 * rr} fill="none" stroke={C.gold} strokeWidth={6 + 8 * amp} opacity={0.15 + 0.4 * amp} filter="url(#glow)" />;
-            })}
-            <ellipse cx={960} cy={535} rx={36} ry={16} fill={C.gold} opacity={0.8} filter="url(#glow)" />
-          </g>
-          {Array.from({length: 48}, (_, k) => {
-            const a = (2 * Math.PI * k) / 48;
-            const x = 960 + 540 * Math.cos(a);
-            const y = 540 + 225 * Math.sin(a);
-            const s = 0.75 + 0.25 * Math.sin(a);
-            return (
-              <g key={k} opacity={ring(k)}>
-                <ellipse cx={x} cy={y - 14 * s} rx={20 * s} ry={24 * s} fill="#9fb4e8" opacity={0.9} />
-                <ellipse cx={x - 5 * s} cy={y - 22 * s} rx={7 * s} ry={6 * s} fill="#fff" opacity={0.6} />
-              </g>
-            );
-          })}
+          <Surface3D
+            map={heightMap('corral', 84, 120, corralH)}
+            cx={960}
+            cy={555}
+            w={1280}
+            depth={400}
+            hz={150}
+            reveal={ramp(t, cue(6) + 0.2, cue(6) + 5.5, (x) => x)}
+            pulse={(u, v) => {
+              const r = Math.hypot(u, v);
+              return r < CORRAL_R ? 0.07 * Math.sin(t * 2.2) * J0(CORRAL_K * r) ** 2 : 0;
+            }}
+            gradId="corral-grad"
+          />
           <Label x={960} y={235} size={30} color={C.ink} weight={600}>
             48 atom besi di atas tembaga · IBM, 1993
           </Label>
-          <Label x={960} y={828} size={26} color={C.gold} opacity={wave}>
+          <Label x={960} y={842} size={26} color={C.gold} opacity={wave}>
             gelombang berdiri elektron di dalam “kotak melingkar”
           </Label>
-          <Label x={1640} y={300} size={20} color={C.muted} anchor="end" opacity={wave}>
-            ilustrasi skematis
+          <Label x={1700} y={300} size={20} color={C.muted} anchor="end" opacity={wave}>
+            rekonstruksi skematis (J₀²)
           </Label>
         </g>
       </Stage>

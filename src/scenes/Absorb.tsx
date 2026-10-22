@@ -17,11 +17,11 @@ const PA = {x: 1010, w: 760};
 const integrand = (nf: number) => (u: number) => psi(nf, u) * (u - 0.5) * 2 * psi(1, u);
 
 const Panel: React.FC<{y: number; nf: number; ok: boolean; p: number; t: number}> = ({y, nf, ok, p}) => {
-  const box = {x: PA.x, y, w: PA.w, sy: 100};
+  const box = {x: PA.x, y, w: PA.w, sy: 80};
   const f = integrand(nf);
   return (
     <g opacity={p}>
-      <rect x={PA.x - 30} y={y - 135} width={PA.w + 60} height={215} rx={16} fill="rgba(10,14,30,0.7)" stroke={ok ? C.mint : C.red} strokeOpacity={0.45} strokeWidth={2} />
+      <rect x={PA.x - 30} y={y - 135} width={PA.w + 60} height={245} rx={16} fill="rgba(10,14,30,0.7)" stroke={ok ? C.mint : C.red} strokeOpacity={0.45} strokeWidth={2} />
       <line x1={PA.x} y1={y} x2={PA.x + PA.w} y2={y} stroke={C.muted} strokeWidth={1.5} />
       <line x1={PA.x + PA.w / 2} y1={y - 110} x2={PA.x + PA.w / 2} y2={y + 60} stroke={C.faint} strokeWidth={2} strokeDasharray="6 6" />
       <path d={plotPath((u) => psi(1, u), 0, 1, {...box, sy: 30})} fill="none" stroke={ncol(1)} strokeWidth={2} opacity={0.6} />
@@ -35,7 +35,7 @@ const Panel: React.FC<{y: number; nf: number; ok: boolean; p: number; t: number}
       <Label x={PA.x + PA.w} y={y - 110} size={26} color={ok ? C.mint : C.red} anchor="end" weight={700}>
         {ok ? '∫ ≠ 0 → diizinkan ✓' : '∫ = 0 → terlarang ✗'}
       </Label>
-      <Label x={PA.x + PA.w / 2} y={y + 72} size={20} color={C.muted}>
+      <Label x={PA.x + PA.w / 2} y={y + 92} size={20} color={C.muted}>
         integran ψ{nf === 2 ? '₂' : '₃'} · x · ψ₁ (emas +, biru −; x diukur dari tengah)
       </Label>
     </g>
@@ -56,6 +56,8 @@ export const Absorb: React.FC = () => {
   const evL = ramp(t, cue(4), cue(4) + 0.6);
   const ey = mix(yE(En(1)), yE(En(2)), jump);
   const reset = t > cue(5) ? 1 : 0;
+  const bp = win(t, cue(0) + 0.2, cue(4) - 0.2, 0.8, 0.5);
+  const BX = {x0: 1010, x1: 1730, y: 780};
 
   return (
     <AbsoluteFill>
@@ -87,6 +89,18 @@ export const Absorb: React.FC = () => {
           <line x1={520} y1={yE(En(1)) - 8} x2={520} y2={yE(En(2)) + 12} stroke={C.gold} strokeWidth={4} markerEnd="url(#arrow-gold)" />
           <Label x={540} y={(yE(En(1)) + yE(En(2))) / 2} size={24} color={C.gold} anchor="start" weight={700} opacity={evL}>
             ΔE = 1,13 eV
+          </Label>
+        </g>
+        {/* kotak: rapat peluang berubah dari ψ₁ ke ψ₂ saat foton diserap */}
+        <g opacity={bp}>
+          {[BX.x0, BX.x1].map((x) => (
+            <line key={x} x1={x} y1={BX.y - 330} x2={x} y2={BX.y + 10} stroke={C.ink} strokeWidth={5} />
+          ))}
+          <line x1={BX.x0} y1={BX.y} x2={BX.x1} y2={BX.y} stroke={C.muted} strokeWidth={2} />
+          <path d={areaPath((u) => mix(psi(1, u) ** 2, psi(2, u) ** 2, jump), 0, 1, {x: BX.x0, y: BX.y, w: BX.x1 - BX.x0, sy: 120})} fill={jump > 0.5 ? C.cyan : C.gold} opacity={0.35} />
+          <path d={plotPath((u) => mix(psi(1, u) ** 2, psi(2, u) ** 2, jump), 0, 1, {x: BX.x0, y: BX.y, w: BX.x1 - BX.x0, sy: 120})} fill="none" stroke={jump > 0.5 ? C.cyan : C.gold} strokeWidth={4} />
+          <Label x={(BX.x0 + BX.x1) / 2} y={BX.y - 300} size={28} color={jump > 0.5 ? C.cyan : C.gold} weight={700}>
+            {jump > 0.5 ? '|ψ₂|²: elektron tereksitasi' : '|ψ₁|²: keadaan dasar'}
           </Label>
         </g>
         {/* spektrum */}
@@ -125,8 +139,8 @@ export const Absorb: React.FC = () => {
             ✓
           </Label>
         </g>
-        <Panel y={480} nf={3} ok={false} p={pan3} t={t} />
-        <Panel y={745} nf={2} ok p={pan2} t={t} />
+        <Panel y={470} nf={3} ok={false} p={pan3} t={t} />
+        <Panel y={735} nf={2} ok p={pan2} t={t} />
       </Stage>
       <Formula x={1390} y={260} p={win(t, cue(2), cue(3) - 0.1, 0.7, 0.4) * ramp(t, cue(2), cue(2) + 0.7, BACK)} accent={C.gold} caption="energi foton = selisih dua tingkat">
         Δ<V color={C.gold}>E</V>&nbsp;=&nbsp;

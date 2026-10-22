@@ -1,5 +1,5 @@
 import React from 'react';
-import {rand, sample, smoothPath} from '../anim';
+import {mix, rand, sample, smoothPath} from '../anim';
 import {C, FONT} from '../theme';
 
 /* ------------------------------------------------------------------ */
@@ -140,7 +140,37 @@ export const heat = (v: number) => {
   return `rgb(${c[0]},${c[1]},${c[2]})`;
 };
 
-/** Rapat peluang kotak 2D sebagai peta panas (cells × cells). */
+const HEAT_URL: Record<string, string> = {};
+/** Gambar peta panas halus (dibuat sekali lewat canvas di browser render). */
+const heatURL = (nx: number, ny: number, ar: number) => {
+  const key = `${nx}-${ny}-${ar.toFixed(2)}`;
+  if (HEAT_URL[key]) return HEAT_URL[key];
+  if (typeof document === 'undefined') return '';
+  const W0 = 160;
+  const H0 = Math.round(160 * ar);
+  const cv = document.createElement('canvas');
+  cv.width = W0;
+  cv.height = H0;
+  const ctx = cv.getContext('2d')!;
+  const img = ctx.createImageData(W0, H0);
+  for (let j = 0; j < H0; j++)
+    for (let i = 0; i < W0; i++) {
+      const u = (i + 0.5) / W0;
+      const v = 1 - (j + 0.5) / H0;
+      const d = Math.sin(nx * Math.PI * u) ** 2 * Math.sin(ny * Math.PI * v) ** 2;
+      const m = heat(d).match(/\d+/g)!.map(Number);
+      const o = (j * W0 + i) * 4;
+      img.data[o] = m[0];
+      img.data[o + 1] = m[1];
+      img.data[o + 2] = m[2];
+      img.data[o + 3] = 255;
+    }
+  ctx.putImageData(img, 0, 0);
+  HEAT_URL[key] = cv.toDataURL('image/png');
+  return HEAT_URL[key];
+};
+
+/** Rapat peluang kotak 2D sebagai peta panas halus. */
 export const Heatmap2D: React.FC<{x: number; y: number; w: number; h: number; nx: number; ny: number; cells?: number; opacity?: number; nodes?: number; label?: string}> = ({
   x,
   y,
@@ -148,25 +178,14 @@ export const Heatmap2D: React.FC<{x: number; y: number; w: number; h: number; nx
   h,
   nx,
   ny,
-  cells = 34,
   opacity = 1,
   nodes = 0,
   label,
 }) => {
   if (opacity <= 0) return null;
-  const cw = w / cells;
-  const ch = h / cells;
-  const out: React.ReactNode[] = [];
-  for (let i = 0; i < cells; i++)
-    for (let j = 0; j < cells; j++) {
-      const u = (i + 0.5) / cells;
-      const v = (j + 0.5) / cells;
-      const d = Math.sin(nx * Math.PI * u) ** 2 * Math.sin(ny * Math.PI * v) ** 2;
-      out.push(<rect key={`${i}-${j}`} x={x + i * cw} y={y + h - (j + 1) * ch} width={cw + 0.6} height={ch + 0.6} fill={heat(d)} />);
-    }
   return (
     <g opacity={opacity}>
-      {out}
+      <image href={heatURL(nx, ny, 1)} x={x} y={y} width={w} height={h} preserveAspectRatio="none" />
       <rect x={x} y={y} width={w} height={h} fill="none" stroke={C.ink} strokeWidth={3} />
       {nodes > 0
         ? [
@@ -253,18 +272,38 @@ export const BoxCube: React.FC<{cx: number; cy: number; size: number; yaw: numbe
   );
 };
 
-/** Botol kecil berisi larutan titik kuantum. glow 0..1 = berpendar. */
-export const Vial: React.FC<{x: number; y: number; w?: number; h?: number; color: string; glow?: number; opacity?: number}> = ({x, y, w = 150, h = 330, color, glow = 0, opacity = 1}) => {
+/** Botol kecil berisi larutan titik kuantum. glow 0..1 = berpendar; t > 0 menghidupkan percikan foton. */
+export const Vial: React.FC<{x: number; y: number; w?: number; h?: number; color: string; glow?: number; opacity?: number; t?: number}> = ({x, y, w = 150, h = 330, color, glow = 0, opacity = 1, t}) => {
   const top = y - h / 2;
   const liquidTop = top + h * 0.3;
+  const gid = `vial-${color.replace('#', '')}`;
   const body = `M${x - w / 2},${top + 30} L${x - w / 2},${y + h / 2 - 24} Q${x - w / 2},${y + h / 2} ${x - w / 2 + 24},${y + h / 2} L${x + w / 2 - 24},${y + h / 2} Q${x + w / 2},${y + h / 2} ${x + w / 2},${y + h / 2 - 24} L${x + w / 2},${top + 30} Z`;
+  const lh = y + h / 2 - liquidTop - 8;
   return (
     <g opacity={opacity}>
+      <defs>
+        <radialGradient id={gid} cx="50%" cy="58%" r="70%">
+          <stop offset="0%" stopColor="#ffffff" stopOpacity={0.9} />
+          <stop offset="22%" stopColor={color} stopOpacity={1} />
+          <stop offset="100%" stopColor={color} stopOpacity={0.55} />
+        </radialGradient>
+      </defs>
       <circle cx={x} cy={y + h * 0.15} r={w * 1.15} fill={color} opacity={0.2 * glow} filter="url(#blur-soft)" />
-      <rect x={x - w / 2 + 8} y={liquidTop} width={w - 16} height={y + h / 2 - liquidTop - 8} rx={18} fill={color} opacity={0.15 + 0.85 * glow} />
-      <rect x={x - w / 2 + 8} y={liquidTop} width={w - 16} height={y + h / 2 - liquidTop - 8} rx={18} fill="#fff" opacity={0.1 * glow} filter="url(#glow)" />
-      <path d={body} fill="rgba(200,215,255,0.06)" stroke="#c8d6ff" strokeOpacity={0.55} strokeWidth={3} />
-      <rect x={x - w / 2 + 14} y={top + 40} width={10} height={h - 90} rx={5} fill="#fff" opacity={0.18} />
+      <rect x={x - w / 2 + 8} y={liquidTop} width={w - 16} height={lh} rx={18} fill={color} opacity={0.15 * (1 - glow)} />
+      <rect x={x - w / 2 + 8} y={liquidTop} width={w - 16} height={lh} rx={18} fill={`url(#${gid})`} opacity={0.95 * glow} />
+      <ellipse cx={x} cy={liquidTop + 4} rx={w / 2 - 10} ry={8} fill="#fff" opacity={0.25 * glow + 0.08} />
+      {t !== undefined && glow > 0
+        ? Array.from({length: 14}, (_, k) => {
+            const ph = (t * (0.25 + 0.1 * rand(k * 3.1)) + rand(k * 7.7)) % 1;
+            const px = x - w / 2 + 16 + rand(k * 5.3) * (w - 32) + 6 * Math.sin(t * 2 + k);
+            const py = mix(y + h / 2 - 20, top - h * 0.35, ph);
+            const a = Math.sin(Math.PI * ph) * glow;
+            return <circle key={k} cx={px} cy={py} r={2 + 2.5 * rand(k * 1.9)} fill={color} opacity={a} filter="url(#glow)" />;
+          })
+        : null}
+      <path d={body} fill="rgba(200,215,255,0.06)" stroke="#c8d6ff" strokeOpacity={0.6} strokeWidth={3} />
+      <rect x={x - w / 2 + 14} y={top + 40} width={10} height={h - 90} rx={5} fill="#fff" opacity={0.22} />
+      <rect x={x + w / 2 - 22} y={top + 60} width={5} height={h - 140} rx={3} fill="#fff" opacity={0.1} />
       <rect x={x - w / 2 - 6} y={top} width={w + 12} height={36} rx={8} fill="#2a3352" stroke="#4a5680" strokeWidth={2} />
     </g>
   );
