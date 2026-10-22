@@ -2,7 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {BACK, EASE_IN_OUT, mix, ramp, win} from '../anim';
 import {Formula, Label, Stage, V} from '../components/primitives';
-import {Walls as WallsViz, ncol} from '../components/viz';
+import {Electron, Walls as WallsViz, ncol} from '../components/viz';
 import {useScene} from '../SceneContext';
 import {C} from '../theme';
 
@@ -19,7 +19,7 @@ const curve = (f: (u: number) => number, y: number, amp: number) =>
 export const Walls: React.FC = () => {
   const {t, cue, wordOf} = useScene();
   const drop = ramp(t, cue(0) + 0.6, cue(0) + 1.4, BACK);
-  const lbl = ramp(t, wordOf(0, 'L') - 0.2, wordOf(0, 'L') + 0.5);
+  const lbl = ramp(t, wordOf(0, 'L', 1) - 0.2, wordOf(0, 'L', 1) + 0.5);
   const pot = ramp(t, cue(1), cue(1) + 0.7);
   const n1 = win(t, cue(2), cue(4) - 0.2, 0.9, 0.5);
   const pins = win(t, wordOf(2, 'dinding') - 0.3, cue(4) - 0.2, 0.5, 0.5);
@@ -38,6 +38,11 @@ export const Walls: React.FC = () => {
   return (
     <AbsoluteFill>
       <Stage>
+        {(() => {
+          const saw = (t * 0.55) % 2;
+          const u = saw < 1 ? saw : 2 - saw;
+          return <Electron x={B.x0 + 30 + u * (W - 60)} y={MID} r={16} opacity={win(t, -0.5, cue(2) - 0.2, 0.6, 0.5)} />;
+        })()}
         <WallsViz x0={B.x0} x1={B.x1} top={B.top} bottom={B.bottom} p={drop} hatch={pot} />
         <g opacity={lbl * drop}>
           <line x1={B.x0} y1={B.bottom + 34} x2={B.x1} y2={B.bottom + 34} stroke={C.gold} strokeWidth={3} markerEnd="url(#arrow-gold)" markerStart="url(#arrow-gold)" />

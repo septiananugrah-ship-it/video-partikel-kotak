@@ -8,7 +8,7 @@ import {useScene} from '../SceneContext';
 import {C} from '../theme';
 
 const MY = 330;
-const DX = 150;
+const DX = 185;
 const BUT = {n: 4, bonds: [2, 1, 2]};
 const HEX = {n: 6, bonds: [2, 1, 2, 1, 2]};
 const SEP = {n: 6, bonds: [1, 2, 1, 1, 2], sp3: [0, 3]};
@@ -56,30 +56,30 @@ export const Pi: React.FC = () => {
     <AbsoluteFill>
       <Stage>
         {/* molekul */}
-        <Chain n={4} cx={960} cy={MY} bonds={BUT.bonds} opacity={butO} dx={DX} r={34} />
-        <Chain n={6} cx={960} cy={MY} bonds={HEX.bonds} opacity={hex} dx={DX} r={34} />
-        <Chain n={6} cx={960} cy={MY} bonds={SEP.bonds} sp3={SEP.sp3} opacity={sep} dx={DX} r={34} />
-        <Label x={960} y={200} size={30} color={C.ink} weight={600} opacity={butO}>
+        <Chain n={4} cx={960} cy={MY} bonds={BUT.bonds} opacity={butO} dx={DX} r={42} />
+        <Chain n={6} cx={960} cy={MY} bonds={HEX.bonds} opacity={hex} dx={DX} r={42} />
+        <Chain n={6} cx={960} cy={MY} bonds={SEP.bonds} sp3={SEP.sp3} opacity={sep} dx={DX} r={42} />
+        <Label x={960} y={190} size={30} color={C.ink} weight={600} opacity={butO * (1 - lobes)}>
           butadiena · CH₂=CH–CH=CH₂ · 4 elektron π
         </Label>
-        <Label x={960} y={200} size={30} color={C.ink} weight={600} opacity={hex}>
+        <Label x={960} y={190} size={30} color={C.ink} weight={600} opacity={hex}>
           heksatriena · 6 elektron π
         </Label>
-        <Label x={960} y={200} size={30} color={C.ink} weight={600} opacity={sep}>
+        <Label x={960} y={190} size={30} color={C.ink} weight={600} opacity={sep}>
           CH₃–CH=CH–CH₂–CH=CH₂
         </Label>
         {/* orbital p */}
         <g opacity={lobes * butO}>
           {chainPts(4, 960, MY, DX).map(([x, y], i) => (
             <g key={i}>
-              <ellipse cx={x} cy={y - 80} rx={30} ry={52} fill={C.gold} opacity={0.45} />
-              <ellipse cx={x} cy={y + 80} rx={30} ry={52} fill={C.cyan} opacity={0.45} />
+              <ellipse cx={x} cy={y - 92} rx={34} ry={58} fill={C.gold} opacity={0.45} />
+              <ellipse cx={x} cy={y + 92} rx={34} ry={58} fill={C.cyan} opacity={0.45} />
             </g>
           ))}
         </g>
         {/* jalur π */}
         <g opacity={band}>
-          <rect x={960 - boxW} y={MY - 70} width={2 * boxW} height={140} rx={70} fill={C.violet} opacity={0.12} />
+          <rect x={960 - boxW} y={MY - 80} width={2 * boxW} height={160} rx={80} fill={C.violet} opacity={0.12} />
           {Array.from({length: N}, (_, k) => {
             const u = 0.5 + 0.45 * Math.sin(t * (1.3 + k * 0.17) + k * 1.7);
             return <circle key={k} cx={960 - boxW + 20 + u * (2 * boxW - 40)} cy={MY + (k % 2 ? -50 : 50)} r={9} fill={C.cyan} filter="url(#glow)" />;
@@ -125,7 +125,7 @@ export const Pi: React.FC = () => {
           </g>
         </g>
         {/* spektrum UV */}
-        <g opacity={spec}>
+        <g opacity={spec * (1 - trend)}>
           <rect x={SP.x0} y={SP.y - 22} width={SP.x1 - SP.x0} height={44} rx={8} fill="#2a1d5a" opacity={0.8} />
           <rect x={sx(380)} y={SP.y - 22} width={SP.x1 - sx(380)} height={44} fill="url(#rainbow-h)" opacity={0.7} />
           {[200, 300, 400].map((nm) => (

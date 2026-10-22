@@ -38,7 +38,7 @@ export const Energy: React.FC = () => {
           <g opacity={box}>
             {[x0, x1].map((x, i) => (
               <g key={i}>
-                <line x1={x} y1={230} x2={x} y2={BOT} stroke={C.ink} strokeWidth={10} opacity={0.15} filter="url(#glow-strong)" />
+                <line x1={x} y1={230} x2={x} y2={BOT} stroke={C.ink} strokeWidth={10} opacity={0.15} />
                 <line x1={x} y1={230} x2={x} y2={BOT} stroke={C.ink} strokeWidth={5} />
               </g>
             ))}

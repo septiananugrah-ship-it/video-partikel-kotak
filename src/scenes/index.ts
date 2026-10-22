@@ -6,10 +6,15 @@ import {ChemTunnel} from './ChemTunnel';
 import {Dyes} from './Dyes';
 import {Energy} from './Energy';
 import {Finite} from './Finite';
+import {Flash} from './Flash';
 import {Free} from './Free';
 import {Hook} from './Hook';
+import {Outro} from './Outro';
 import {Pi} from './Pi';
+import {QDot} from './QDot';
+import {Recap} from './Recap';
 import {Roadmap} from './Roadmap';
+import {STM} from './STM';
 import {Title} from './Title';
 import {Tunnel} from './Tunnel';
 import {Walls} from './Walls';
@@ -34,4 +39,9 @@ export const SCENES: Record<string, React.FC> = {
   pi: Pi,
   dyes: Dyes,
   chemtunnel: ChemTunnel,
+  qdot: QDot,
+  stm: STM,
+  flash: Flash,
+  recap: Recap,
+  outro: Outro,
 };

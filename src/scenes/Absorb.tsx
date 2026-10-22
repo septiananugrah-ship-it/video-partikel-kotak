@@ -106,7 +106,7 @@ export const Absorb: React.FC = () => {
             inframerah
           </Label>
           <g opacity={m1099}>
-            <line x1={sx(1099)} y1={SP.y - 46} x2={sx(1099)} y2={SP.y + 36} stroke={C.gold} strokeWidth={5} filter="url(#glow)" />
+            <line x1={sx(1099)} y1={SP.y - 46} x2={sx(1099)} y2={SP.y + 36} stroke={C.gold} strokeWidth={5} />
             <Label x={sx(1099)} y={SP.y + 100} size={28} color={C.gold} weight={700} font="mono">
               λ ≈ 1099 nm
             </Label>

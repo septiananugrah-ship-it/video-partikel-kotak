@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
-import {BACK, EASE_IN_OUT, ramp, win} from '../anim';
+import {BACK, EASE_IN_OUT, mix, ramp, win} from '../anim';
 import {DrawPath, Formula, Frac, Label, Part, Stage, Sup, V} from '../components/primitives';
 import {Electron, plotPath} from '../components/viz';
 import {useScene} from '../SceneContext';
@@ -10,15 +10,17 @@ const AX = {x0: 120, x1: 1800, y: 390};
 const LAM = 240;
 const PL = {x: 220, y: 840, w: 600, sy: 290};
 
-const wavePath = (f: (x: number) => number) =>
+const wavePath = (f: (x: number) => number, y0 = AX.y) =>
   Array.from({length: 281}, (_, i) => {
     const x = AX.x0 + ((AX.x1 - AX.x0) * i) / 280;
-    return `${i ? 'L' : 'M'}${x.toFixed(1)},${(AX.y - f(x)).toFixed(1)}`;
+    return `${i ? 'L' : 'M'}${x.toFixed(1)},${(y0 - f(x)).toFixed(1)}`;
   }).join(' ');
 
 export const Free: React.FC = () => {
   const {t, cue, wordOf} = useScene();
   const axis = ramp(t, 0, 0.9);
+  const lift = ramp(t, cue(2) + 0.5, cue(3) + 0.3, EASE_IN_OUT);
+  const ay = mix(560, AX.y, lift);
   const ePart = ramp(t, 0.2, 0.8) * (1 - ramp(t, cue(3) - 0.2, cue(3) + 0.5));
   const vLine = ramp(t, cue(1), cue(1) + 0.6);
   const wave = ramp(t, cue(3), cue(3) + 1.2) * (1 - ramp(t, cue(7) - 0.2, cue(7) + 0.6));
@@ -43,42 +45,51 @@ export const Free: React.FC = () => {
     <AbsoluteFill>
       <Stage>
         <g opacity={axis}>
-          <line x1={AX.x0} y1={AX.y} x2={AX.x1} y2={AX.y} stroke={C.muted} strokeWidth={2} markerEnd="url(#arrow-muted)" markerStart="url(#arrow-muted)" />
-          <Label x={AX.x0 + 10} y={AX.y - 105} size={28} color={C.muted} anchor="start">
+          <line x1={AX.x0} y1={ay} x2={AX.x1} y2={ay} stroke={C.muted} strokeWidth={2} markerEnd="url(#arrow-muted)" markerStart="url(#arrow-muted)" />
+          <Label x={AX.x0 + 10} y={ay - 105} size={28} color={C.muted} anchor="start">
             −∞
           </Label>
-          <Label x={AX.x1 - 10} y={AX.y - 105} size={28} color={C.muted} anchor="end">
+          <Label x={AX.x1 - 10} y={ay - 105} size={28} color={C.muted} anchor="end">
             +∞
           </Label>
-          <Label x={AX.x1 - 120} y={AX.y - 105} size={30} color={C.muted} font="serif" italic>
+          <Label x={AX.x1 - 120} y={ay - 105} size={30} color={C.muted} font="serif" italic>
             x
           </Label>
         </g>
         <g opacity={vLine}>
-          <rect x={AX.x0} y={AX.y + 110} width={AX.x1 - AX.x0} height={4} fill={C.violet} opacity={0.7} />
-          <Label x={1400} y={AX.y + 140} size={28} color={C.violet} weight={600}>
+          <rect x={AX.x0} y={ay + 110} width={AX.x1 - AX.x0} height={4} fill={C.violet} opacity={0.7} />
+          <Label x={1400} y={ay + 140} size={28} color={C.violet} weight={600} opacity={1 - ramp(t, cue(2) - 0.4, cue(2))}>
             V(x) = 0 di seluruh ruang
           </Label>
         </g>
-        <Electron x={ex} y={AX.y} r={13} opacity={ePart} />
+        <Electron x={ex} y={ay} r={16} opacity={ePart} />
+        <g opacity={ePart}>
+          <line x1={ex + 30} y1={ay - 50} x2={ex + 150} y2={ay - 50} stroke={C.gold} strokeWidth={4} markerEnd="url(#arrow-gold)" />
+          <Label x={ex + 90} y={ay - 84} size={26} color={C.gold} font="serif" italic>
+            p tetap
+          </Label>
+          <Label x={960} y={ay - 170} size={30} color={C.ink} weight={600}>
+            tanpa gaya: F = 0
+          </Label>
+        </g>
         {/* gelombang bidang */}
         <path d={wavePath((x) => 70 * Math.cos(kk * x - om * t))} fill="none" stroke={C.cyan} strokeWidth={5} opacity={wave} filter="url(#glow)" />
         <g opacity={lam}>
-          <line x1={960} y1={AX.y - 100} x2={960 + LAM} y2={AX.y - 100} stroke={C.gold} strokeWidth={3} markerEnd="url(#arrow-gold)" markerStart="url(#arrow-gold)" />
-          <Label x={960 + LAM / 2} y={AX.y - 132} size={30} color={C.gold} font="serif" italic>
+          <line x1={960} y1={ay - 100} x2={960 + LAM} y2={ay - 100} stroke={C.gold} strokeWidth={3} markerEnd="url(#arrow-gold)" markerStart="url(#arrow-gold)" />
+          <Label x={960 + LAM / 2} y={ay - 132} size={30} color={C.gold} font="serif" italic>
             λ = h / p
           </Label>
         </g>
         {/* |ψ|² rata */}
         <g opacity={band}>
-          <rect x={AX.x0} y={AX.y - 40} width={AX.x1 - AX.x0} height={80} fill={C.gold} opacity={0.22} />
-          <rect x={AX.x0} y={AX.y - 40} width={AX.x1 - AX.x0} height={3} fill={C.gold} />
+          <rect x={AX.x0} y={ay - 40} width={AX.x1 - AX.x0} height={80} fill={C.gold} opacity={0.22} />
+          <rect x={AX.x0} y={ay - 40} width={AX.x1 - AX.x0} height={3} fill={C.gold} />
           {[300, 640, 980, 1320, 1660].map((x, i) => (
-            <Label key={x} x={x} y={AX.y - 100 + 12 * Math.sin(t * 2 + i)} size={46} color={C.gold} weight={800} opacity={ramp(t, cue(7) + 1 + i * 0.2, cue(7) + 1.5 + i * 0.2)}>
+            <Label key={x} x={x} y={ay - 100 + 12 * Math.sin(t * 2 + i)} size={46} color={C.gold} weight={800} opacity={ramp(t, cue(7) + 1 + i * 0.2, cue(7) + 1.5 + i * 0.2)}>
               ?
             </Label>
           ))}
-          <Label x={960} y={AX.y + 70} size={28} color={C.gold} weight={600}>
+          <Label x={960} y={ay + 70} size={28} color={C.gold} weight={600}>
             |ψ|² sama di mana-mana
           </Label>
         </g>
@@ -88,7 +99,7 @@ export const Free: React.FC = () => {
             <path key={i} d={wavePath(comp(c))} fill="none" stroke={C.violet} strokeWidth={1.6} opacity={0.35 * (1 - ramp(t, cue(8) + 1.5, cue(8) + 3.5))} />
           ))}
           <path d={wavePath(sum)} fill="none" stroke={C.mint} strokeWidth={5} opacity={ramp(t, cue(8) + 1, cue(8) + 2.5)} filter="url(#glow)" />
-          <Label x={xc} y={AX.y - 140} size={28} color={C.mint} weight={700} opacity={ramp(t, cue(8) + 2, cue(8) + 2.6)}>
+          <Label x={xc} y={ay - 140} size={28} color={C.mint} weight={700} opacity={ramp(t, cue(8) + 2, cue(8) + 2.6)}>
             paket gelombang
           </Label>
         </g>

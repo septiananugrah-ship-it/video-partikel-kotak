@@ -111,7 +111,7 @@ export const Walls: React.FC<{x0: number; x1: number; top: number; bottom: numbe
         <rect x={x1} y={top} width={outside} height={h} fill="url(#hatch-wall)" opacity={hatch} />
         {[x0, x1].map((x) => (
           <g key={x}>
-            <line x1={x} y1={top} x2={x} y2={bottom} stroke={color} strokeWidth={10} opacity={0.18} filter="url(#glow-strong)" />
+            <line x1={x} y1={top} x2={x} y2={bottom} stroke={color} strokeWidth={10} opacity={0.18} />
             <line x1={x} y1={top} x2={x} y2={bottom} stroke={color} strokeWidth={5} strokeLinecap="round" />
           </g>
         ))}

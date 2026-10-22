@@ -25,7 +25,6 @@ const X1 = 1660;
 export const Title: React.FC = () => {
   const {t} = useScene();
   const walls = ramp(t, 0.1, 1.4, EASE_IN_OUT);
-  const sweep = ramp(t, 2.2, 4.2, EASE_IN_OUT);
   const sub = ramp(t, 2.6, 3.6);
   const line = ramp(t, 1.8, 3.2, EASE_IN_OUT);
   return (
@@ -34,7 +33,7 @@ export const Title: React.FC = () => {
         <Glow x={960} y={480} r={640} color="gold" opacity={0.16 * walls} />
         {[X0, X1].map((x) => (
           <g key={x} opacity={walls}>
-            <line x1={x} y1={160} x2={x} y2={860} stroke={C.ink} strokeWidth={14} opacity={0.15} filter="url(#glow-strong)" />
+            <line x1={x} y1={160} x2={x} y2={860} stroke={C.ink} strokeWidth={14} opacity={0.15} />
             <line x1={x} y1={160 + (1 - walls) * 700} x2={x} y2={860} stroke={C.ink} strokeWidth={5} opacity={0.75} />
           </g>
         ))}
@@ -57,16 +56,9 @@ export const Title: React.FC = () => {
             t={t}
             start={0.9}
             step={0.05}
-            style={{fontFamily: FONT.sans, fontWeight: 800, fontSize: 142, letterSpacing: 3, lineHeight: 1.08, color: C.gold, textShadow: '0 0 60px rgba(255,194,74,0.45)'}}
+            style={{fontFamily: FONT.sans, fontWeight: 800, fontSize: 104, letterSpacing: 3, lineHeight: 1.08, color: C.gold, textShadow: '0 0 60px rgba(255,194,74,0.45)'}}
           />
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              background: `linear-gradient(100deg, transparent ${sweep * 140 - 30}%, rgba(255,255,255,0.35) ${sweep * 140 - 20}%, transparent ${sweep * 140 - 10}%)`,
-              mixBlendMode: 'overlay',
-            }}
-          />
+
         </div>
         <div style={{width: 640 * line, height: 2, margin: '30px 0 24px', background: `linear-gradient(90deg, transparent, ${C.gold}, transparent)`}} />
         <div style={{fontFamily: FONT.sans, fontSize: 36, color: C.muted, letterSpacing: 1, opacity: sub, translate: `0px ${(1 - sub) * 16}px`}}>
